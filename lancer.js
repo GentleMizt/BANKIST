@@ -87,7 +87,9 @@ console.log(arr.slice()); // also creates a shallow copy of the array.
 
 // SPLICE METHOD
 // It performs the same function as the slice method, just that the 'splice' method mutates the array.
-console.log(arr.splice(2));
+// console.log(arr.splice(2));
+arr.splice(-1)
+arr.splice(1, 2); // the second parameter specifies the amount of items to be deleted a.k.a the DELETE COUNT.
 console.log(arr);
 
 // Most times, what we are interested in is removing some elements from an array and since the 'splice' method mutates the array, we often use it to achieve that goal.
