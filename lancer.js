@@ -76,7 +76,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 // Array Methods are methods that we can attach to all arrays in javscript.
 
-let arr = ['a', 'b', 'c', 'd', 'e'];
+// let arr = ['a', 'b', 'c', 'd', 'e'];
 
 // SLICE METHOD
 // console.log(arr.slice(2)); // Returns a new array with the extracted part. It does not MUTATE the actual ARRAY.
@@ -89,23 +89,26 @@ let arr = ['a', 'b', 'c', 'd', 'e'];
 
 // It performs the same function as the slice method, just that the 'splice' method mutates the array.
 // console.log(arr.splice(2));
-arr.splice(-1)
+// arr.splice(-1)
 // console.log(arr);
-arr.splice(1, 2); // the second parameter specifies the amount of items to be deleted a.k.a the DELETE COUNT.
+// arr.splice(1, 2); // the second parameter specifies the amount of items to be deleted a.k.a the DELETE COUNT.
 // console.log(arr);
 // Most times, what we are interested in is removing some elements from an array and since the 'splice' method mutates the array, we often use it to achieve that goal.
 
 // REVERSE METHOD
-arr = ['a', 'b', 'c', 'd', 'e'];
-const arr2 = ['j', 'i', 'h', 'g', 'f']
+// arr = ['a', 'b', 'c', 'd', 'e'];
+// const arr2 = ['j', 'i', 'h', 'g', 'f']
 // console.log(arr2.reverse()); // The Reverse method also mutates the original array.
 // console.log(arr2);
 
 // CONCAT METHOD
-const letters = arr.concat(arr2);  // this can also be done using the spread operators.
+// const letters = arr.concat(arr2);  // this can also be done using the spread operators.
 // console.log(letters);
 
 // JOIN METHOD
 // console.log(letters.join(' - '));
 
 // THE NEW (AT) METHODS
+const arr = [23,11,64];
+console.log(arr[0]);
+console.log(arr.at(0)); // returns the value at the index position that was specified.
