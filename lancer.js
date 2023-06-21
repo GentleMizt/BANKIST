@@ -112,3 +112,5 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const arr = [23,11,64];
 console.log(arr[0]);
 console.log(arr.at(0)); // returns the value at the index position that was specified.
+
+// t
