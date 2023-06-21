@@ -86,4 +86,10 @@ console.log(arr.slice(1, -2));
 console.log(arr.slice()); // also creates a shallow copy of the array.
 
 // SPLICE METHOD
+// It performs the same function as the slice method, just that the 'splice' method mutates the array.
+console.log(arr.splice(2));
+console.log(arr);
+
+// Most times, what we are interested in is removing some elements from an array and since the 'splice' method mutates the array, we often use it to achieve that goal.
+
 
