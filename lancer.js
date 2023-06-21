@@ -86,12 +86,18 @@ console.log(arr.slice(1, -2));
 console.log(arr.slice()); // also creates a shallow copy of the array.
 
 // SPLICE METHOD
+
 // It performs the same function as the slice method, just that the 'splice' method mutates the array.
 // console.log(arr.splice(2));
 arr.splice(-1)
+console.log(arr);
 arr.splice(1, 2); // the second parameter specifies the amount of items to be deleted a.k.a the DELETE COUNT.
 console.log(arr);
-
 // Most times, what we are interested in is removing some elements from an array and since the 'splice' method mutates the array, we often use it to achieve that goal.
 
+// REVERSE METHOD
+arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j', 'i', 'h', 'g', 'f']
+console.log(arr2.reverse()); // The Reverse method also mutates the original array.
+console.log(arr2);
 
