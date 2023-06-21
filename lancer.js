@@ -74,3 +74,9 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+// Array Methods are methods that we can attach to all arrays in javscript.
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+console.log(arr.slice(2)); // Returns a new array with the extracted part. It does not MUTATE the actual ARRAY.
+
