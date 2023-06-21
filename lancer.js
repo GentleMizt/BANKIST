@@ -102,5 +102,8 @@ console.log(arr2.reverse()); // The Reverse method also mutates the original arr
 console.log(arr2);
 
 // CONCAT METHOD
-const letters = arr.concat(arr2);
+const letters = arr.concat(arr2);  // this can also be done using the spread operators.
 console.log(letters);
+
+// JOIN METHOD
+console.log(letters.join(' - '));
