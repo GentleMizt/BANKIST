@@ -113,4 +113,9 @@ const arr = [23,11,64];
 console.log(arr[0]);
 console.log(arr.at(0)); // returns the value at the index position that was specified.
 
-// t
+// traditional methods of getting the last array elements.
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
+
+// A new ES6 method that we can use tpo get the last element of the array.
+console.log(arr.at(-1));
