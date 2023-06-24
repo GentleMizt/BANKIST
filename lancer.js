@@ -65,11 +65,11 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -145,7 +145,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //   }
 // });
 
-// The forEach method can take in three arguments in this order, 
+// The forEach method can take in three arguments in this order,
 // the current element
 // the index
 // the entire array being looped over
@@ -153,3 +153,14 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // WHEN SHOULD YOU USE THE FOROF OR THE FOREACH LOOP
 // You can't continue or break out of a forEach loop, if you need to break out of a loop, use the for of loop.
 // Apart from that, it comes down to your personal reference.
+
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+console.log(currencies);
+currencies.forEach((curr, key, map) =>{
+  
+})
