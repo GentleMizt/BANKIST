@@ -136,12 +136,12 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // }
 
 // Looping using thr forEach method
-movements.forEach((movement, index, array) => {
-  if (movement > 0) {
-    console.log(`Movements ${index + 1}: You deposited ${movement}`);
+movements.forEach((mov, i, arr) => {
+  if (mov > 0) {
+    console.log(`Movements ${i + 1}: You deposited ${mov}`);
   } else {
     // the Math.abs removes the negative sign in a number.
-    console.log(`Movements ${index + 1}: You withdrew ${Math.abs(movement)}`);
+    console.log(`Movements ${i + 1}: You withdrew ${Math.abs(mov)}`);
   }
 });
 
