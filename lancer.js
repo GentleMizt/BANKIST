@@ -154,13 +154,15 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // You can't continue or break out of a forEach loop, if you need to break out of a loop, use the for of loop.
 // Apart from that, it comes down to your personal reference.
 
+// Using the forEach on Maps
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
 
-console.log(currencies);
-currencies.forEach((value, key, map) =>{
+currencies.forEach((value, key, map) => {
   console.log(`${key}: ${value}`);
-})
+});
+
+// Using the forEach on Sets.
