@@ -144,3 +144,8 @@ movements.forEach(movement => {
     console.log(`You withdrew ${Math.abs(movement)}`);
   }
 });
+
+// The forEach method can take in three arguments, 
+// the current element
+// the index
+// the entire array being looped over
