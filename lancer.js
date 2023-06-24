@@ -169,8 +169,8 @@ currencies.forEach((value, key, map) => {
 const currenciesUnique = new Set (['USD', 'GBP', 'EUR', 'USD', 'EUR']);
 console.log(currenciesUnique);
 
-currenciesUnique.forEach((value, key, map) => {
-  console.log(`${key}: ${value}`);
+currenciesUnique.forEach((value, _, map) => {
+  console.log(`${value}: ${value}`);
 });
 
 // It is important to note that a set doesn't have keys in them, so in a forEach Method, there is no index to assign a value to. A set just makes use of the values.
