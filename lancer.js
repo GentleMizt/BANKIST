@@ -145,7 +145,11 @@ movements.forEach((mov, i, arr) => {
   }
 });
 
-// The forEach method can take in three arguments, 
+// The forEach method can take in three arguments in this order, 
 // the current element
 // the index
 // the entire array being looped over
+
+// WHEN SHOULD YOU USE THE FOROF OR THE FOREACH LOOP
+// You can't continue or break out of a forEach loop, if you need to break out of a loop, use the for of loop.
+// Apart from that, it comes down to your personal reference.
