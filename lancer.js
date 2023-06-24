@@ -128,12 +128,14 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // Looping using the for Of method.
-for (const movement of movements){
-  if(movement > 0){
-    console.log(`You deposited ${movement}`);
-  } else {
-    // the Math.abs removes the negative sign in a number.
-    console.log(`You withdrew ${Math.abs(movement)}`);
-  }
-}
+// for (const movement of movements){
+//   if(movement > 0){
+//     console.log(`You deposited ${movement}`);
+//   } else {
+//     // the Math.abs removes the negative sign in a number.
+//     console.log(`You withdrew ${Math.abs(movement)}`);
+//   }
+// }
 
+// Looping using thr forEach method
+movements.forEach(movement, () =>{})
