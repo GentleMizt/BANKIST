@@ -75,8 +75,7 @@ const displayMovements = function (movements) {
     </div>
   `;
 
-  containerMovements.insertAdjacentHTML('afterbegin', html);
-  
+    containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
 
@@ -197,8 +196,8 @@ currenciesUnique.forEach((value, _, map) => {
 // It is important to note that a set doesn't have keys in them, so in a forEach Method, there is no index to assign a value to. A set just makes use of the values.
 
 // CODING CHALLENGE #1
- 
-const checkData = function(dogsJulia, dogsKate){
+
+const checkData = function (dogsJulia, dogsKate) {
   const dogsJuliaNew = [...dogsJulia];
   dogsJuliaNew.shift();
   dogsJuliaNew.splice(-2);
@@ -206,19 +205,19 @@ const checkData = function(dogsJulia, dogsKate){
   const dogs = [...dogsJuliaNew, ...dogsKate];
   console.log(dogs);
 
-  dogs.forEach((dog, i)=>{
+  dogs.forEach((dog, i) => {
     // const age = dog > 3 ? 'an adult' : 'still a puppy'
     // const dogStr = `Dog Number ${i + 1} is ${age} and is ${dog} years old.`
     // console.log(dogStr);
 
-    const dogStr2 = `Dog Number ${i + 1}`
+    const dogStr2 = `Dog Number ${i + 1}`;
     if (dog > 3) {
-        console.log(`${dogStr2} is an adult and is ${dog} years old.`);
+      console.log(`${dogStr2} is an adult and is ${dog} years old.`);
     } else {
       console.log(`${dogStr2} is still a puppy 🐶`);
     }
-  })
-}
+  });
+};
 
 // checkData([3,5,2,12,7], [4,1,15,8,3]);
 // checkData([9,16,6,8,3], [10,5,6,1,4]);
