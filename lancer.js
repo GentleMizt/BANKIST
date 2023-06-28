@@ -200,10 +200,11 @@ currenciesUnique.forEach((value, _, map) => {
  
 const checkData = function(dogsJulia, dogsKate){
   const dogsJuliaNew = [...dogsJulia];
-  console.log(dogsJuliaNew);
-  console.log(dogsJuliaNew.splice(-2));
-  console.log(dogsJuliaNew.shift());
-  console.log(dogsJuliaNew);
+  const removedFirst = dogsJuliaNew.shift();
+  const removedLast2 = dogsJuliaNew.splice(-2);
+
+  const dogsArr = [...dogsJuliaNew, ...dogsKate];
+  console.log(dogsArr);
 }
 
 checkData([3,5,2,12,7], [4,1,15,8,3]);
