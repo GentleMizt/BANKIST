@@ -64,13 +64,15 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // DOM MANIPULATION OF THE BANKIST APP
 const displayMovements = function (movements) {
   movements.forEach((mov, i) => {
-    const html = ` <div class="movements__row">
-    <div class="movements__type movements__type--withdrawal">
-      1 withdrawal
+    const html = `
+    <div class="movements__row">
+      <div class="movements__type movements__type--withdrawal">
+        1 withdrawal
+      </div>
+      <div class="movements__date">24/01/2037</div>
+      <div class="movements__value">-378€</div>
     </div>
-    <div class="movements__date">24/01/2037</div>
-    <div class="movements__value">-378€</div>
-  </div>`;
+  `;
   });
 };
 
