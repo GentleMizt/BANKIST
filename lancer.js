@@ -61,13 +61,18 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-
 // DOM MANIPULATION OF THE BANKIST APP
-const displayMovements = function (movements){
-  movements.forEach((mov, i)=>{
-    
-  })
-}
+const displayMovements = function (movements) {
+  movements.forEach((mov, i) => {
+    const html = ` <div class="movements__row">
+    <div class="movements__type movements__type--withdrawal">
+      1 withdrawal
+    </div>
+    <div class="movements__date">24/01/2037</div>
+    <div class="movements__value">-378€</div>
+  </div>`;
+  });
+};
 
 displayMovements(account1.movements);
 
@@ -176,7 +181,7 @@ currencies.forEach((value, key, map) => {
 });
 
 // Using the forEach on Sets.
-const currenciesUnique = new Set (['USD', 'GBP', 'EUR', 'USD', 'EUR']);
+const currenciesUnique = new Set(['USD', 'GBP', 'EUR', 'USD', 'EUR']);
 console.log(currenciesUnique);
 
 currenciesUnique.forEach((value, _, map) => {
@@ -186,4 +191,3 @@ currenciesUnique.forEach((value, _, map) => {
 // It is important to note that a set doesn't have keys in them, so in a forEach Method, there is no index to assign a value to. A set just makes use of the values.
 
 // DOM MANIPULATION OF THE BANKIST APP
-
