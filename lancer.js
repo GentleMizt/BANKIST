@@ -204,9 +204,11 @@ const checkData = function(dogsJulia, dogsKate){
   const removedLast2 = dogsJuliaNew.splice(-2);
 
   const dogs = [...dogsJuliaNew, ...dogsKate];
+  console.log(dogs);
   dogs.forEach((dog, i)=>{
-    const age = dog > 3 ? 'adult' : 'puppy'
-    const dogStr = `Dog Number ${i + 1} is an ${age} and is ${dog} years old.`
+    const age = dog > 3 ? 'an adult' : 'still a puppy'
+    const dogStr = `Dog Number ${i + 1} is ${age} and is ${dog} years old.`
+    console.log(dogStr);
   })
 }
 
