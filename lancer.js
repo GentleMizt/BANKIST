@@ -64,8 +64,12 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // DOM MANIPULATION OF THE BANKIST APP
 const displayMovements = function (movements){
-  
+  movements.forEach((mov, i)=>{
+    
+  })
 }
+
+displayMovements(account1.movements);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
