@@ -203,8 +203,11 @@ const checkData = function(dogsJulia, dogsKate){
   const removedFirst = dogsJuliaNew.shift();
   const removedLast2 = dogsJuliaNew.splice(-2);
 
-  const dogsArr = [...dogsJuliaNew, ...dogsKate];
-  console.log(dogsArr);
+  const dogs = [...dogsJuliaNew, ...dogsKate];
+  dogs.forEach((dog, i)=>{
+    const age = dog > 3 ? 'adult' : 'puppy'
+    const dogStr = `Dog Number ${i + 1} is an ${age} and is ${dog} years old.`
+  })
 }
 
 checkData([3,5,2,12,7], [4,1,15,8,3]);
