@@ -211,7 +211,7 @@ const checkData = function (dogsJulia, dogsKate) {
     // console.log(dogStr);
 
     const dogStr2 = `Dog Number ${i + 1}`;
-    if (dog > 3) {
+    if (dog >= 3) {
       console.log(`${dogStr2} is an adult and is ${dog} years old.`);
     } else {
       console.log(`${dogStr2} is still a puppy 🐶`);
