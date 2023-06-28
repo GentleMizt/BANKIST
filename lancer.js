@@ -67,10 +67,9 @@ const displayMovements = function (movements) {
     const html = `
     <div class="movements__row">
       <div class="movements__type movements__type--withdrawal">
-        1 withdrawal
+        ${i + 1}
       </div>
-      <div class="movements__date">24/01/2037</div>
-      <div class="movements__value">-378€</div>
+      <div class="movements__value">${mov}</div>
     </div>
   `;
   });
