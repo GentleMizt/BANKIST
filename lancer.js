@@ -63,6 +63,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // DOM MANIPULATION OF THE BANKIST APP
 const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
   movements.forEach((mov, i) => {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `
