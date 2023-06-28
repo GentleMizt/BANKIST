@@ -74,7 +74,7 @@ const displayMovements = function (movements) {
     </div>
   `;
 
-  containerMovements.insertAdjacentHTML('afterbegin');
+  containerMovements.insertAdjacentHTML('afterbegin', html);
   
   });
 };
