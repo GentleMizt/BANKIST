@@ -83,9 +83,10 @@ displayMovements(account1.movements);
 
 const createUsernames = function(user){
   const username = user.toLowerCase().split(' ').map(name => name[0]).join('');
+  return username;  
 }
 
-// createUsernames('Steven Thomas Williams');
+console.log(createUsernames('Steven Thomas Maxilliams'));;
 
 
 /////////////////////////////////////////////////
