@@ -143,7 +143,7 @@ displayMovements(account1.movements);
 
 /////////////// LOOPING ARRAYS USING THE FOR EACH METHOD
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // Looping using the for Of method.
 // for (const movement of movements){
@@ -236,3 +236,4 @@ const checkData = function (dogsJulia, dogsKate) {
 
 
 // MAP METHOD IN PRACTICE
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
