@@ -253,6 +253,8 @@ const movementsDescription = movements.map((mov, i, arr)=>{
   if (mov > 0) {
     return `Movement ${i + 1}: You deposited ${mov}`;
   } else {
-    return `Movement ${i = 1}: You withdrew ${Math.abs(mov)}`;
+    return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
   }
 })
+
+console.log(movementsDescription);
