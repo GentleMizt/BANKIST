@@ -247,7 +247,5 @@ const eurToUsd = 1.1;
 // console.log(movementToUsd);
 
 const movementUsd = []
-for (const mov of movements){
-  movementUsd.push(mov * eurToUsd);
-}
+for (const mov of movements) movementUsd.push(mov * eurToUsd);
 console.log(movementUsd);
