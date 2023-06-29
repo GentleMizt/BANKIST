@@ -234,3 +234,5 @@ const checkData = function (dogsJulia, dogsKate) {
 // REDUCE: this reduces all array elements down to one single value (e.g. adding all elements together).
 // It's the reduced value that gets returned in the end.
 
+
+// MAP METHOD IN PRACTICE
