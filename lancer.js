@@ -249,10 +249,6 @@ for (const mov of movements) movementUsd.push(mov * eurToUsd);
 console.log(movementUsd);
 
 // The map method also has access to the same three parameters that the forEach method has i.e (current element, index, array).
-const movementsDescription = movements.map((mov, i, arr)=>{
-  `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
-
- 
-})
+const movementsDescription = movements.map((mov, i, arr)=>  `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`);
 
 console.log(movementsDescription);
