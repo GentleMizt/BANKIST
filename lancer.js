@@ -231,5 +231,6 @@ const checkData = function (dogsJulia, dogsKate) {
 // FILTER: Used to filter elements in the array that satisfies a given condition.
 // It returns a NEW ARRAY containing the array elements that passed a specified test condition.
 
-// REDUCE: this reduces all array elements down to one single value (e.g. adding all elements together)
+// REDUCE: this reduces all array elements down to one single value (e.g. adding all elements together).
+// It's the reduced value that gets returned in the end.
 
