@@ -228,3 +228,5 @@ const checkData = function (dogsJulia, dogsKate) {
 // MAP: The map method is also used to loop over arrays and it is very similar to the for each method, but with the difference that mapping creates a brand new array based on the original array.
 // It returns a NEW ARRAY containing the results of applying an operation on all original array elements.
 
+// FI
+
