@@ -239,7 +239,7 @@ const checkData = function (dogsJulia, dogsKate) {
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 const eurToUsd = 1.1;
-const movementToUsd = movements.map((mov) => mov * eurToUsd)
+const movementToUsd = movements.map(mov => mov * eurToUsd);
 
 console.log(movements);
 console.log(movementToUsd);
