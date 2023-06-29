@@ -249,6 +249,6 @@ for (const mov of movements) movementUsd.push(mov * eurToUsd);
 console.log(movementUsd);
 
 // The map method also has access to the same three parameters that the forEach method has i.e (current element, index, array).
-movements.map((mov, i, arr)=>{
+const movementsDescription = movements.map((mov, i, arr)=>{
   
 })
