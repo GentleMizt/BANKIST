@@ -239,11 +239,9 @@ currenciesUnique.forEach((value, _, map) => {
 // CODING CHALLENGE #2
 
 const calcAverageHumanAge = function(ages){
-  ages.map((age, i)=>{
+  ages.map((age)=>{
     let humanAge;
-    if (age <= 2) {
-      humanAge = 2 * age;
-    }
+    humanAge = age <= 2 ? 2 * age : 16 + (age * 4);
   })
 }
 
