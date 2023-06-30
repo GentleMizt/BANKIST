@@ -308,4 +308,4 @@ const max = movements.reduce((acc, mov)=>{
   else return acc = mov;
 }, movements[0]);
 
-console.log(max);
+// console.log(max);
