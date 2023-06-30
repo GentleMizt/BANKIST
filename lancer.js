@@ -240,13 +240,18 @@ currenciesUnique.forEach((value, _, map) => {
 
 const calcAverageHumanAge = function(ages){
   ages.map((age)=>{
+    console.log(age);
     let humanAge = 0;
-    humanAge = age <= 2 ? 2 * age : 16 + (age * 4);
-    return humanAge
+    if (age < 2) {
+      humanAge = 2 * age;
+    } else {
+      humanAge = 16 + (age * 4);
+    }
   });
-  console.log(humanAge);
+  // console.log(humanAge);
 }
 
+// console.log(calcAverageHumanAge([5,2,4,1,15,8,3]));
 calcAverageHumanAge([5,2,4,1,15,8,3]);
 // calcAverageHumanAge(16,6,10,5,6,1,4);
 
