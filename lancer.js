@@ -78,7 +78,6 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-
 displayMovements(account1.movements);
 
 const createUsernames = function(accs){
@@ -86,9 +85,7 @@ const createUsernames = function(accs){
     acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
   })
 }
-
 createUsernames(accounts);
-console.log(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -191,42 +188,42 @@ const currencies = new Map([
 ]);
 
 currencies.forEach((value, key, map) => {
-  console.log(`${key}: ${value}`);
+  // console.log(`${key}: ${value}`);
 });
 
 // Using the forEach on Sets.
 const currenciesUnique = new Set(['USD', 'GBP', 'EUR', 'USD', 'EUR']);
-console.log(currenciesUnique);
+// console.log(currenciesUnique);
 
 currenciesUnique.forEach((value, _, map) => {
-  console.log(`${value}: ${value}`);
+  // console.log(`${value}: ${value}`);
 });
 
 // It is important to note that a set doesn't have keys in them, so in a forEach Method, there is no index to assign a value to. A set just makes use of the values.
 
 // CODING CHALLENGE #1
 
-const checkData = function (dogsJulia, dogsKate) {
-  const dogsJuliaNew = [...dogsJulia];
-  dogsJuliaNew.shift();
-  dogsJuliaNew.splice(-2);
+// const checkData = function (dogsJulia, dogsKate) {
+//   const dogsJuliaNew = [...dogsJulia];
+//   dogsJuliaNew.shift();
+//   dogsJuliaNew.splice(-2);
 
-  const dogs = [...dogsJuliaNew, ...dogsKate];
-  console.log(dogs);
+//   const dogs = [...dogsJuliaNew, ...dogsKate];
+//   console.log(dogs);
 
-  dogs.forEach((dog, i) => {
-    // const age = dog > 3 ? 'an adult' : 'still a puppy'
-    // const dogStr = `Dog Number ${i + 1} is ${age} and is ${dog} years old.`
-    // console.log(dogStr);
+//   dogs.forEach((dog, i) => {
+//     // const age = dog > 3 ? 'an adult' : 'still a puppy'
+//     // const dogStr = `Dog Number ${i + 1} is ${age} and is ${dog} years old.`
+//     // console.log(dogStr);
 
-    const dogStr2 = `Dog Number ${i + 1}`;
-    if (dog >= 3) {
-      console.log(`${dogStr2} is an adult and is ${dog} years old.`);
-    } else {
-      console.log(`${dogStr2} is still a puppy 🐶`);
-    }
-  });
-};
+//     const dogStr2 = `Dog Number ${i + 1}`;
+//     if (dog >= 3) {
+//       console.log(`${dogStr2} is an adult and is ${dog} years old.`);
+//     } else {
+//       console.log(`${dogStr2} is still a puppy 🐶`);
+//     }
+//   });
+// };
 
 // checkData([3,5,2,12,7], [4,1,15,8,3]);
 // checkData([9,16,6,8,3], [10,5,6,1,4]);
@@ -250,17 +247,17 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd = 1.1;
 const movementToUsd = movements.map(mov => mov * eurToUsd);
 
-console.log(movements);
-console.log(movementToUsd);
+// console.log(movements);
+// console.log(movementToUsd);
 
 const movementUsd = []
 for (const mov of movements) movementUsd.push(mov * eurToUsd);
-console.log(movementUsd);
+// console.log(movementUsd);
 
 // The map method also has access to the same three parameters that the forEach method has i.e (current element, index, array).
 const movementsDescription = movements.map((mov, i)=>  `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`);
 
-console.log(movementsDescription);
+// console.log(movementsDescription);
 
 
 //// THE FILTER METHOD.
@@ -276,8 +273,8 @@ const withdrawals = [];
 // }
 for (const mov of movements){ if(mov < 0) withdrawals.push(mov)}
 
-console.log(deposits);
-console.log(withdrawals);
+// console.log(deposits);
+// console.log(withdrawals);
 
 
 // THE REDUCE METHOD
@@ -286,17 +283,14 @@ console.log(withdrawals);
 // - A CALL BACK FUNCTION that speciies what to be done in each iteration,
 // - A SECOND PARAMETER that sets the value of the accumulator.
 
-console.log(movements);
+// console.log(movements);
 
 // acc stands for accumulator, and it's like a parameter that's used to keep accumulating the stored values.
-const balance = movements.reduce((acc, cur, i, arr)=>{
-  console.log(`Iteration no ${i}: ${acc}`);
-  return acc + cur
-}, 0); 
+const balance = movements.reduce((acc, cur, i)=> acc + cur, 0); 
 
-console.log(balance);
+// console.log(balance);
 
 let balance2 = 0;
 for (const mov of movements) balance2 += mov;
-console.log(balance2);
+// console.log(balance2);
 
