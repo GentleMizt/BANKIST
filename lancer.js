@@ -282,12 +282,16 @@ console.log(withdrawals);
 
 // THE REDUCE METHOD
 // used to boil down all the elements in an array intp one single value.
+// the reduce method tskes in 2 parameters, 
+// - A CALL BACK FUNCTION that speciies what to be done in each iteration,
+// - A SECOND PARAMETER that sets the value of the accumulator.
 
 console.log(movements);
 
 // acc stands for accumulator, and it's like a parameter that's used to keep accumulating the stored values.
 const balance = movements.reduce((acc, cur, i, arr)=>{
+  console.log(`Iteration no ${i}: ${acc}`);
   return acc + cur
-}); 
+}, 0); 
 
 console.log(balance);
