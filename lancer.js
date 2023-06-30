@@ -267,11 +267,11 @@ console.log(movementsDescription);
 // It takes in a call back function which has access to the current element, index and arry as the forEach Method.
 const deposits = movements.filter((mov)=>{
   return mov > 0;
-})
+});
 
 const withdrawals = [];
 for (const mov of movements){
-  return withdrawals.push(mov < 0);
+  if (mov < 0) withdrawals.push(mov);
 }
 
 console.log(deposits);
