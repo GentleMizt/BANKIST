@@ -304,11 +304,8 @@ for (const mov of movements) balance2 += mov;
 
 // The reduce method can also be used for other different scenarios. In this use case, we'll be using it to get the maximum value of the movements. 
 const max = movements.reduce((acc, mov)=>{
-  if (acc > mov) {
-    return acc;
-  } else {
-    return acc = mov;
-  }
+  if (acc > mov) return acc;
+  else return acc = mov;
 }, movements[0]);
 
 console.log(max);
