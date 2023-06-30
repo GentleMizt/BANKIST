@@ -81,7 +81,7 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 
 const calcDisplayBalance = function(movements){
-  const balance = movements.reduce((acc, cur, i)=> acc + cur, 0)
+  const balance = movements.reduce((acc, cur)=> acc + cur, 0)
   labelBalance.textContent = `${balance}€`;
 };
 calcDisplayBalance(account1.movements);
@@ -302,3 +302,13 @@ let balance2 = 0;
 for (const mov of movements) balance2 += mov;
 // console.log(balance2);
 
+// The reduce method can also be used for other different scenarios. In this use case, we'll be using it to get the maximum value of the movements. 
+const max = movements.reduce((acc, mov)=>{
+  if (acc > mov) {
+    return acc;
+  } else {
+    return acc = mov;
+  }
+}, movements[0]);
+
+console.log(max);
