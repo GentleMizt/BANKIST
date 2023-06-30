@@ -240,19 +240,23 @@ currenciesUnique.forEach((value, _, map) => {
 
 let humanAge = [];
 const calcAverageHumanAge = function(ages){
-  ages.forEach((age)=>{
-    if (age <= 2) {
-      humanAge.push(age[i] * 2)
-    } else {
-      humanAge.push(16 + (4 * age[i]))
-    }
-  });
-  return humanAge;
+
+  //  USING FOR EACH
+  // ages.forEach((age)=>{
+  //   if (age <= 2) {
+  //     humanAge.push(age * 2)
+  //   } else {
+  //     humanAge.push(16 + (4 * age))
+  //   }
+  // });
+  // return humanAge;
+
+  // USING MAPS
 }
 
-console.log(humanAge);
 // console.log(calcAverageHumanAge([5,2,4,1,15,8,3]));
-// calcAverageHumanAge([5,2,4,1,15,8,3]);
+calcAverageHumanAge([5,2,4,1,15,8,3]);
+console.log(humanAge);
 // calcAverageHumanAge(16,6,10,5,6,1,4);
 
 /////////////////////////////////// ----------------------- DATA TRANSFORMATION: MAP, FILTER, REDUCE ------------------------- /////////////////////////////////////////////////////////////
