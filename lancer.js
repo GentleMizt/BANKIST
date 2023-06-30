@@ -238,20 +238,21 @@ currenciesUnique.forEach((value, _, map) => {
 
 // CODING CHALLENGE #2
 
+let humanAge = [];
 const calcAverageHumanAge = function(ages){
-  let humanAge = 0;
-  ages.map((age, i)=>{
-    if (age[i] <= 2) {
-      humanAge = 2 * age[i];
+  ages.forEach((age)=>{
+    if (age <= 2) {
+      humanAge.push(age[i] * 2)
     } else {
-      humanAge = 16 + (age[i] * 4);
+      humanAge.push(16 + (4 * age[i]))
     }
   });
-  console.log(humanAge);
+  return humanAge;
 }
 
+console.log(humanAge);
 // console.log(calcAverageHumanAge([5,2,4,1,15,8,3]));
-calcAverageHumanAge([5,2,4,1,15,8,3]);
+// calcAverageHumanAge([5,2,4,1,15,8,3]);
 // calcAverageHumanAge(16,6,10,5,6,1,4);
 
 /////////////////////////////////// ----------------------- DATA TRANSFORMATION: MAP, FILTER, REDUCE ------------------------- /////////////////////////////////////////////////////////////
