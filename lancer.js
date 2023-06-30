@@ -244,8 +244,10 @@ const calcAverageHumanAge = function(ages){
     let humanAge = 0;
     if (age < 2) {
       humanAge = 2 * age;
+      return humanAge;
     } else {
       humanAge = 16 + (age * 4);
+      return humanAge;
     }
   });
   // console.log(humanAge);
