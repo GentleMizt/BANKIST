@@ -239,7 +239,12 @@ currenciesUnique.forEach((value, _, map) => {
 // CODING CHALLENGE #2
 
 const calcAverageHumanAge = function(ages){
-  
+  ages.map((age, i)=>{
+    let humanAge;
+    if (age <= 2) {
+      humanAge = 2 * age;
+    }
+  })
 }
 
 /////////////////////////////////// ----------------------- DATA TRANSFORMATION: MAP, FILTER, REDUCE ------------------------- /////////////////////////////////////////////////////////////
