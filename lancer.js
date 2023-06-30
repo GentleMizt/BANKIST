@@ -89,7 +89,7 @@ createUsernames(accounts);
 
 const calcPrintBalance = function(movements){
   const balance = movements.reduce((acc, cur, i)=> acc + cur, 0)
-  labelBalance.textContent = balance;
+  labelBalance.textContent = `${balance}€`;
 };
 calcPrintBalance(account1.movements);
 /////////////////////////////////////////////////
