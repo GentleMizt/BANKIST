@@ -268,5 +268,9 @@ console.log(movementsDescription);
 const deposits = movements.filter((mov)=>{
   return mov > 0;
 })
+const withdrawals = movements.filter((mov)=>{
+  return mov < 0;
+})
 
 console.log(deposits);
+console.log(withdrawals);
