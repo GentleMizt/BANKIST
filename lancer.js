@@ -84,15 +84,13 @@ const createUsernames = function(accs){
   accs.forEach((acc)=>{
     acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
   })
-}
+};
 createUsernames(accounts);
 
 const calcPrintBalance = function(movements){
   const balance = movements.reduce((acc, cur, i)=> acc + cur, 0)
-  // return balance;
   labelBalance.textContent = balance;
-}
-
+};
 calcPrintBalance(account1.movements);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
