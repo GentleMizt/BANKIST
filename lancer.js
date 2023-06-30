@@ -278,3 +278,8 @@ for (const mov of movements){ if(mov < 0) withdrawals.push(mov)}
 
 console.log(deposits);
 console.log(withdrawals);
+
+
+// THE REDUCE METHOD
+// used to boil down all the elements in an array intp one single value.
+
