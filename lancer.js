@@ -80,20 +80,22 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
-const calcDisplayBalance = function(movements){
-  const balance = movements.reduce((acc, cur)=> acc + cur, 0)
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, cur) => acc + cur, 0);
   labelBalance.textContent = `${balance}€`;
 };
 calcDisplayBalance(account1.movements);
 
-const createUsernames = function(accs){
-  accs.forEach((acc)=>{
-    acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
-  })
+const createUsernames = function (accs) {
+  accs.forEach(acc => {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
 };
 createUsernames(accounts);
-
-
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -238,9 +240,8 @@ currenciesUnique.forEach((value, _, map) => {
 
 // CODING CHALLENGE #2
 
-let humanAge = [];
-const calcAverageHumanAge = function(ages){
-
+// let humanAge = [];
+const calcAverageHumanAge = function (ages) {
   //  USING FOR EACH
   // ages.forEach((age)=>{
   //   if (age <= 2) {
@@ -252,11 +253,18 @@ const calcAverageHumanAge = function(ages){
   // return humanAge;
 
   // USING MAPS
-}
+  ages.map(age => {
+    if (age <= 2) {
+      humanAge.push(age * 2);
+    } else {
+      humanAge.push(16 + 4 * age);
+    }
+  });
+};
 
 // console.log(calcAverageHumanAge([5,2,4,1,15,8,3]));
-calcAverageHumanAge([5,2,4,1,15,8,3]);
-console.log(humanAge);
+calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// console.log(humanAge);
 // calcAverageHumanAge(16,6,10,5,6,1,4);
 
 /////////////////////////////////// ----------------------- DATA TRANSFORMATION: MAP, FILTER, REDUCE ------------------------- /////////////////////////////////////////////////////////////
@@ -269,7 +277,6 @@ console.log(humanAge);
 // REDUCE: this reduces all array elements down to one single value (e.g. adding all elements together).
 // It's the reduced value that gets returned in the end.
 
-
 // MAP METHOD IN PRACTICE
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -279,19 +286,23 @@ const movementToUsd = movements.map(mov => mov * eurToUsd);
 // console.log(movements);
 // console.log(movementToUsd);
 
-const movementUsd = []
+const movementUsd = [];
 for (const mov of movements) movementUsd.push(mov * eurToUsd);
 // console.log(movementUsd);
 
 // The map method also has access to the same three parameters that the forEach method has i.e (current element, index, array).
-const movementsDescription = movements.map((mov, i)=>  `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`);
+const movementsDescription = movements.map(
+  (mov, i) =>
+    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+      mov
+    )}`
+);
 
 // console.log(movementsDescription);
 
-
 //// THE FILTER METHOD.
 // It takes in a call back function which has access to the current element, index and arry as the forEach Method.
-const deposits = movements.filter((mov)=>{
+const deposits = movements.filter(mov => {
   return mov > 0;
 });
 
@@ -300,22 +311,23 @@ const withdrawals = [];
 // for (const mov of movements){
 //   if (mov < 0) withdrawals.push(mov);
 // }
-for (const mov of movements){ if(mov < 0) withdrawals.push(mov)}
+for (const mov of movements) {
+  if (mov < 0) withdrawals.push(mov);
+}
 
 // console.log(deposits);
 // console.log(withdrawals);
 
-
 // THE REDUCE METHOD
 // used to boil down all the elements in an array intp one single value.
-// the reduce method tskes in 2 parameters, 
+// the reduce method tskes in 2 parameters,
 // - A CALL BACK FUNCTION that speciies what to be done in each iteration,
 // - A SECOND PARAMETER that sets the value of the accumulator.
 
 // console.log(movements);
 
 // acc stands for accumulator, and it's like a parameter that's used to keep accumulating the stored values.
-const balance = movements.reduce((acc, cur, i)=> acc + cur, 0); 
+const balance = movements.reduce((acc, cur, i) => acc + cur, 0);
 
 // console.log(balance);
 
@@ -323,12 +335,10 @@ let balance2 = 0;
 for (const mov of movements) balance2 += mov;
 // console.log(balance2);
 
-// The reduce method can also be used for other different scenarios. In this use case, we'll be using it to get the maximum value of the movements. 
-const max = movements.reduce((acc, mov)=>{
+// The reduce method can also be used for other different scenarios. In this use case, we'll be using it to get the maximum value of the movements.
+const max = movements.reduce((acc, mov) => {
   if (acc > mov) return acc;
-  else return acc = mov;
+  else return (acc = mov);
 }, movements[0]);
 
 // console.log(max);
-
-
