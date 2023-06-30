@@ -80,6 +80,12 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+const calcDisplayBalance = function(movements){
+  const balance = movements.reduce((acc, cur, i)=> acc + cur, 0)
+  labelBalance.textContent = `${balance}€`;
+};
+calcDisplayBalance(account1.movements);
+
 const createUsernames = function(accs){
   accs.forEach((acc)=>{
     acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
@@ -87,11 +93,8 @@ const createUsernames = function(accs){
 };
 createUsernames(accounts);
 
-const calcPrintBalance = function(movements){
-  const balance = movements.reduce((acc, cur, i)=> acc + cur, 0)
-  labelBalance.textContent = `${balance}€`;
-};
-calcPrintBalance(account1.movements);
+
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
