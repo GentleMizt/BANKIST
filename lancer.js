@@ -283,3 +283,6 @@ console.log(withdrawals);
 // THE REDUCE METHOD
 // used to boil down all the elements in an array intp one single value.
 
+console.log(movements);
+
+const balance = movements.reduce((acc)=>{}) // acc stands for accumulator, and it's like a parameter that's used to keep accumulating the stored values.
