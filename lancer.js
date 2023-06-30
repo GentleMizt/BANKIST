@@ -236,7 +236,11 @@ currenciesUnique.forEach((value, _, map) => {
 // checkData([3,5,2,12,7], [4,1,15,8,3]);
 // checkData([9,16,6,8,3], [10,5,6,1,4]);
 
+// CODING CHALLENGE #2
 
+const calcAverageHumanAge = function(ages){
+  
+}
 
 /////////////////////////////////// ----------------------- DATA TRANSFORMATION: MAP, FILTER, REDUCE ------------------------- /////////////////////////////////////////////////////////////
 // MAP: The map method is also used to loop over arrays and it is very similar to the for each method, but with the difference that mapping creates a brand new array based on the original array.
@@ -309,3 +313,5 @@ const max = movements.reduce((acc, mov)=>{
 }, movements[0]);
 
 // console.log(max);
+
+
