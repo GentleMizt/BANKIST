@@ -285,4 +285,9 @@ console.log(withdrawals);
 
 console.log(movements);
 
-const balance = movements.reduce((acc)=>{}) // acc stands for accumulator, and it's like a parameter that's used to keep accumulating the stored values.
+// acc stands for accumulator, and it's like a parameter that's used to keep accumulating the stored values.
+const balance = movements.reduce((acc, cur, i, arr)=>{
+  return acc + cur
+}); 
+
+console.log(balance);
