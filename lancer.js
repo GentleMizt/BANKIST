@@ -265,6 +265,6 @@ console.log(movementsDescription);
 
 //// THE FILTER METHOD.
 // It takes in a call back function which has access to the current element, index and arry as the forEach Method.
-movements.filter(()=>{
-
+const deposits = movements.filter((mov)=>{
+  return mov > 0;
 })
