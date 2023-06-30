@@ -255,9 +255,9 @@ const calcAverageHumanAge = function (ages) {
   // USING MAPS
   ages.map(age => {
     if (age <= 2) {
-      humanAge.push(age * 2);
+      age = 2 * age
     } else {
-      humanAge.push(16 + 4 * age);
+      age = 16 + (4 * age)
     }
   });
 };
