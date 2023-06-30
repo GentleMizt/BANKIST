@@ -240,13 +240,15 @@ currenciesUnique.forEach((value, _, map) => {
 
 const calcAverageHumanAge = function(ages){
   ages.map((age)=>{
-    let humanAge;
+    let humanAge = 0;
     humanAge = age <= 2 ? 2 * age : 16 + (age * 4);
-  })
+    return humanAge
+  });
+  console.log(humanAge);
 }
 
-calcAverageHumanAge(5,2,4,1,15,8,3);
-calcAverageHumanAge(16,6,10,5,6,1,4);
+calcAverageHumanAge([5,2,4,1,15,8,3]);
+// calcAverageHumanAge(16,6,10,5,6,1,4);
 
 /////////////////////////////////// ----------------------- DATA TRANSFORMATION: MAP, FILTER, REDUCE ------------------------- /////////////////////////////////////////////////////////////
 // MAP: The map method is also used to loop over arrays and it is very similar to the for each method, but with the difference that mapping creates a brand new array based on the original array.
