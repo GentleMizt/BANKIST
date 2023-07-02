@@ -253,7 +253,7 @@ const calcAverageHumanAge = function (ages) {
   // return humanAge;
 
   // USING MAPS
-  const humanAge = ages.map(age => {
+  const humanAges = ages.map(age => {
     if (age <= 2) {
       return 2 * age
     } else {
@@ -261,7 +261,12 @@ const calcAverageHumanAge = function (ages) {
     }
   });
 
-  console.log(humanAge);
+  const filteredAge = humanAges.filter((hAge)=>{
+    return hAge >= 18;
+  })
+  
+  console.log(humanAges);
+  console.log(filteredAge);
 };
 
 // console.log(calcAverageHumanAge([5,2,4,1,15,8,3]));
