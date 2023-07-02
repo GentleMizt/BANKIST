@@ -258,12 +258,11 @@ const calcAverageHumanAge = function (ages) {
   }, 0);
 
   const average = total / filteredAges.length;
-  console.log(average);
+  console.log(`The filtered human ages are: ${filteredAges}`);
+  console.log(`The average of the filtered human ages is ${average}`);
 };
 
-// console.log(calcAverageHumanAge([5,2,4,1,15,8,3]));
-// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-// console.log(humanAge);
+calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 calcAverageHumanAge([16,6,10,5,6,1,4]);
 
 /////////////////////////////////// ----------------------- DATA TRANSFORMATION: MAP, FILTER, REDUCE ------------------------- /////////////////////////////////////////////////////////////
