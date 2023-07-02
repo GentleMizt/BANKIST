@@ -213,33 +213,28 @@ currenciesUnique.forEach((value, _, map) => {
 
 // CODING CHALLENGE #1
 
-// const checkData = function (dogsJulia, dogsKate) {
-//   const dogsJuliaNew = [...dogsJulia];
-//   dogsJuliaNew.shift();
-//   dogsJuliaNew.splice(-2);
+const checkData = function (dogsJulia, dogsKate) {
+  const dogsJuliaNew = [...dogsJulia];
+  dogsJuliaNew.shift();
+  dogsJuliaNew.splice(-2);
 
-//   const dogs = [...dogsJuliaNew, ...dogsKate];
-//   console.log(dogs);
+  const dogs = [...dogsJuliaNew, ...dogsKate];
+  console.log(dogs);
 
-//   dogs.forEach((dog, i) => {
-//     // const age = dog > 3 ? 'an adult' : 'still a puppy'
-//     // const dogStr = `Dog Number ${i + 1} is ${age} and is ${dog} years old.`
-//     // console.log(dogStr);
+  dogs.forEach((dog, i) => {
+    const dogStr2 = `Dog Number ${i + 1}`;
+    if (dog >= 3) {
+      console.log(`${dogStr2} is an adult and is ${dog} years old.`);
+    } else {
+      console.log(`${dogStr2} is still a puppy 🐶`);
+    }
+  });
+};
 
-//     const dogStr2 = `Dog Number ${i + 1}`;
-//     if (dog >= 3) {
-//       console.log(`${dogStr2} is an adult and is ${dog} years old.`);
-//     } else {
-//       console.log(`${dogStr2} is still a puppy 🐶`);
-//     }
-//   });
-// };
-
-// checkData([3,5,2,12,7], [4,1,15,8,3]);
-// checkData([9,16,6,8,3], [10,5,6,1,4]);
+checkData([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+checkData([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
 // CODING CHALLENGE #2
-
 const calcAverageHumanAge = function (ages) {
   const humanAges = ages.map(age => {
     if (age <= 2) {
