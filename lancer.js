@@ -240,19 +240,7 @@ currenciesUnique.forEach((value, _, map) => {
 
 // CODING CHALLENGE #2
 
-// let humanAge = [];
 const calcAverageHumanAge = function (ages) {
-  //  USING FOR EACH
-  // ages.forEach((age)=>{
-  //   if (age <= 2) {
-  //     humanAge.push(age * 2)
-  //   } else {
-  //     humanAge.push(16 + (4 * age))
-  //   }
-  // });
-  // return humanAge;
-
-  // USING MAPS
   const humanAges = ages.map(age => {
     if (age <= 2) {
       return 2 * age
@@ -265,17 +253,12 @@ const calcAverageHumanAge = function (ages) {
     return hAge >= 18;
   })
 
-  let totalArr = []
-  const averageHumanAge = filteredAges.reduce((acc, fAge)=>{
-    totalArr.push(fAge);
-    const total = (acc + fAge);
-    return total / totalArr.length
-  }, 0)
+  const total = filteredAges.reduce((acc, fAge) => {
+    return acc + fAge;
+  }, 0);
 
-  // console.log(humanAges);
-  console.log(filteredAges);
-  console.log(totalArr.length);
-  console.log(averageHumanAge);
+  const average = total / filteredAges.length;
+  
 };
 
 // console.log(calcAverageHumanAge([5,2,4,1,15,8,3]));
