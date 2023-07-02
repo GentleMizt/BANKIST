@@ -212,7 +212,6 @@ currenciesUnique.forEach((value, _, map) => {
 // It is important to note that a set doesn't have keys in them, so in a forEach Method, there is no index to assign a value to. A set just makes use of the values.
 
 // CODING CHALLENGE #1
-
 const checkData = function (dogsJulia, dogsKate) {
   const dogsJuliaNew = [...dogsJulia];
   dogsJuliaNew.shift();
