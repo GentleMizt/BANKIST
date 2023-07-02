@@ -261,12 +261,20 @@ const calcAverageHumanAge = function (ages) {
     }
   });
 
-  const filteredAge = humanAges.filter((hAge)=>{
+  const filteredAges = humanAges.filter((hAge)=>{
     return hAge >= 18;
   })
-  
+
+  let totalArr = []
+  const averageHumanAge = filteredAges.reduce((acc, fAge)=>{
+    totalArr.push(fAge);
+    return (acc + fAge) / totalArr.length;
+  }, 0)
+
   console.log(humanAges);
-  console.log(filteredAge);
+  console.log(filteredAges);
+  console.log(totalArr);
+  console.log(averageHumanAge);
 };
 
 // console.log(calcAverageHumanAge([5,2,4,1,15,8,3]));
