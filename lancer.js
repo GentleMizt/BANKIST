@@ -258,6 +258,7 @@ const calcAverageHumanAge = function (ages) {
   }, 0);
 
   const average = total / filteredAges.length;
+
   console.log(`The filtered human ages are: ${filteredAges}`);
   console.log(`The average of the filtered human ages is ${average}`);
 };
