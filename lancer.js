@@ -268,12 +268,13 @@ const calcAverageHumanAge = function (ages) {
   let totalArr = []
   const averageHumanAge = filteredAges.reduce((acc, fAge)=>{
     totalArr.push(fAge);
-    return (acc + fAge) / totalArr.length;
+    const total = (acc + fAge);
+    return total / totalArr.length
   }, 0)
 
-  console.log(humanAges);
+  // console.log(humanAges);
   console.log(filteredAges);
-  console.log(totalArr);
+  console.log(totalArr.length);
   console.log(averageHumanAge);
 };
 
