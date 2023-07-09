@@ -373,3 +373,4 @@ const totalDepositsUsd = movements
 // console.log(totalDepositsUsd);
 
 // NOTE: It's only possible to chain methods when the first method call returns an array, as methods are called on arrays.
+// Chaining should not be over used, instead it should be optimized. It can cause performance issues when it involves really large arrays.
