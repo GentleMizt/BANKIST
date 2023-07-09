@@ -246,8 +246,10 @@ const calcAverageHumanAge = function (ages) {
   console.log(`The average of the filtered human ages is ${average}`);
 };
 
-calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+
+console.log(`The average of the first array is ${avg1}, The average of the second array is ${avg2}`);
 
 // JONAZ METHOD
 
