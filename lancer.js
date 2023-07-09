@@ -86,17 +86,27 @@ const calcDisplayBalance = function (movements) {
 };
 calcDisplayBalance(account1.movements);
 
-const calcDisplaySummary = function(movements){
-  const incomes = movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
+const calcDisplaySummary = function (movements) {
+  const incomes = movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
 
-  const outgoings = movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0);
+  const outgoings = movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(outgoings)}€`;
 
-  const interest = movements.filter(mov => mov > 0).map(deposit => deposit * 12/100).reduce((acc, int) => acc + int ,0);
-  labelSumInterest.textContent = `${interest}€`
-  
-}
+  const interest = movements
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * 1.2) / 100)
+    .filter((int, i, arr) => {
+      console.log(arr)
+      return int >= 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest}€`;
+};
 calcDisplaySummary(account1.movements);
 
 const createUsernames = function (accs) {
@@ -357,7 +367,8 @@ const totalDepositsUsd = movements
   // .map(mov => mov * eurToUsd)
   .map((mov, i, arr) => {
     // console.log(arr);
-    return mov * eurToUsd})
+    return mov * eurToUsd;
+  })
   .reduce((acc, mov) => acc + mov, 0);
 // console.log(totalDepositsUsd);
 
