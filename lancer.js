@@ -240,10 +240,6 @@ const calcAverageHumanAge = function (ages) {
   const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
 
   return average;
-
-
-  console.log(`The filtered human ages are: ${adults}`);
-  console.log(`The average of the filtered human ages is ${average}`);
 };
 
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
