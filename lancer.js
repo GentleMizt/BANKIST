@@ -86,6 +86,12 @@ const calcDisplayBalance = function (movements) {
 };
 calcDisplayBalance(account1.movements);
 
+const calcDisplaySummary = function(movements){
+  const incomes = movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`
+}
+calcDisplaySummary(account1.movements);
+
 const createUsernames = function (accs) {
   accs.forEach(acc => {
     acc.username = acc.owner
@@ -230,17 +236,20 @@ const checkData = function (dogsJulia, dogsKate) {
   });
 };
 
-checkData([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
-checkData([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+// checkData([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+// checkData([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
 // CODING CHALLENGE #2
 const calcAverageHumanAge = function (ages) {
-  const humanAges = ages.map(age => age <= 2 ? 2 * age : 16 + (4 * age));
+  const humanAges = ages.map(age => (age <= 2 ? 2 * age : 16 + 4 * age));
   const adults = humanAges.filter(age => age >= 18);
   // const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
 
   // Another way of calculating the average
-  const average = adults.reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+  const average = adults.reduce(
+    (acc, age, i, arr) => acc + age / arr.length,
+    0
+  );
 
   return average;
 };
@@ -248,10 +257,11 @@ const calcAverageHumanAge = function (ages) {
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 
-console.log(`The average of the first array is ${avg1}, The average of the second array is ${avg2}`);
+// console.log(
+//   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
+// );
 
 // JONAZ METHOD
-
 
 /////////////////////////////////// ----------------------- DATA TRANSFORMATION: MAP, FILTER, REDUCE ------------------------- /////////////////////////////////////////////////////////////
 // MAP: The map method is also used to loop over arrays and it is very similar to the for each method, but with the difference that mapping creates a brand new array based on the original array.
@@ -331,8 +341,17 @@ const max = movements.reduce((acc, mov) => {
 
 //////////////// --------------------- CHAINING METHOD ------------------------- ////////////////////////////
 
-// PIPELINE 
-const totalDepositsUsd = movements.filter(mov => mov > 0).map(mov => mov * eurToUsd).reduce((acc, mov) => acc + mov, 0);
-console.log(totalDepositsUsd);
+// PIPELINE
+// It's hard debugging Pipeline Chaining Method like these especially when one doesn't know where the error is from.
+// In order to debug easily, we log and check the array at each method call.
+// We do this using the (arr) parameter that's availabe in the call back functions.
+const totalDepositsUsd = movements
+  .filter(mov => mov > 0)
+  // .map(mov => mov * eurToUsd)
+  .map((mov, i, arr) => {
+    // console.log(arr);
+    return mov * eurToUsd})
+  .reduce((acc, mov) => acc + mov, 0);
+// console.log(totalDepositsUsd);
 
 // NOTE: It's only possible to chain methods when the first method call returns an array, as methods are called on arrays.
