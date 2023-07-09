@@ -240,7 +240,7 @@ const calcAverageHumanAge = function (ages) {
   // const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
 
   // Another way of calculating the average
-  const average = adults.reduce((acc, age, i, arr) => acc + age / arr.length , 0) / adults.length;
+  const average = adults.reduce((acc, age, i, arr) => acc + age / arr.length, 0);
 
   return average;
 };
