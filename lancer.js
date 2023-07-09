@@ -89,8 +89,12 @@ calcDisplayBalance(account1.movements);
 const calcDisplaySummary = function(movements){
   const incomes = movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
+
   const outgoings = movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(outgoings)}€`
+  labelSumOut.textContent = `${Math.abs(outgoings)}€`;
+
+  const interest = movements.filter(mov => mov > 0).map(deposit => deposit * 12/100).reduce((acc, int) => acc + int ,0);
+  labelSumInterest.textContent = `${interest}€`
   
 }
 calcDisplaySummary(account1.movements);
