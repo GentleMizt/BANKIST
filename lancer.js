@@ -101,7 +101,6 @@ const calcDisplaySummary = function (movements) {
     .filter(mov => mov > 0)
     .map(deposit => (deposit * 1.2) / 100)
     .filter((int, i, arr) => {
-      console.log(arr)
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
@@ -257,23 +256,33 @@ const checkData = function (dogsJulia, dogsKate) {
 // checkData([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
 // CODING CHALLENGE #2
-const calcAverageHumanAge = function (ages) {
-  const humanAges = ages.map(age => (age <= 2 ? 2 * age : 16 + 4 * age));
-  const adults = humanAges.filter(age => age >= 18);
-  // const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
+// const calcAverageHumanAge = function (ages) {
+//   const humanAges = ages.map(age => (age <= 2 ? 2 * age : 16 + 4 * age));
+//   const adults = humanAges.filter(age => age >= 18);
+//   // const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
 
-  // Another way of calculating the average
-  const average = adults.reduce(
-    (acc, age, i, arr) => acc + age / arr.length,
-    0
-  );
+//   // Another way of calculating the average
+//   const average = adults.reduce(
+//     (acc, age, i, arr) => acc + age / arr.length,
+//     0
+//   );
 
-  return average;
-};
+//   return average;
+// };
 
-const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+// const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 
+// CODING CHALLENGE 3
+const datas1 = [5, 2, 4, 1, 15, 8, 3];
+const datas2 = [16, 6, 10, 5, 6, 1, 4];
+
+const calcAverageHumanAge = datas1
+  .map(data => (data <= 2 ? 2 * data : 16 + 4 * data))
+  .filter(data => data >= 18)
+  .reduce((acc, data, i, arr) => acc + data / arr.length, 0);
+
+  console.log(calcAverageHumanAge);
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
 // );
