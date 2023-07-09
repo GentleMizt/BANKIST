@@ -328,3 +328,7 @@ const max = movements.reduce((acc, mov) => {
 }, movements[0]);
 
 // console.log(max);
+
+//////////////// --------------------- CHAINING METHOD ------------------------- ////////////////////////////
+
+movements.filter(mov => mov > 0).map(mov => mov * eurToUsd)
