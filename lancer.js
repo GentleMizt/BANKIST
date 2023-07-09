@@ -333,3 +333,5 @@ const max = movements.reduce((acc, mov) => {
 
 const totalDepositsUsd = movements.filter(mov => mov > 0).map(mov => mov * eurToUsd).reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositsUsd);
+
+// NOTE: It's only possible to chain methods when the first method call returns an array, as methods are called on arrays.
