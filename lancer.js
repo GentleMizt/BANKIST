@@ -236,16 +236,13 @@ checkData([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 // CODING CHALLENGE #2
 const calcAverageHumanAge = function (ages) {
   const humanAges = ages.map(age => age <= 2 ? 2 * age : 16 + (4 * age));
+  const adults = humanAges.filter(age => age >= 18);
 
-  const filteredAges = humanAges.filter(age => age >= 18);
+  const  = adults.reduce((acc, age) => acc + age, 0);
 
-  const total = filteredAges.reduce((acc, fAge) => {
-    return acc + fAge;
-  }, 0);
+  // const average = total / adults.length;
 
-  const average = total / filteredAges.length;
-
-  console.log(`The filtered human ages are: ${filteredAges}`);
+  console.log(`The filtered human ages are: ${adults}`);
   console.log(`The average of the filtered human ages is ${average}`);
 };
 
