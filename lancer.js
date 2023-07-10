@@ -78,13 +78,11 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-displayMovements(account1.movements);
 
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, cur) => acc + cur, 0);
   labelBalance.textContent = `${balance}€`;
 };
-calcDisplayBalance(account1.movements);
 
 const calcDisplaySummary = function (movements) {
   const incomes = movements
@@ -106,7 +104,6 @@ const calcDisplaySummary = function (movements) {
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
-calcDisplaySummary(account1.movements);
 
 const createUsernames = function (accs) {
   accs.forEach(acc => {
@@ -132,10 +129,15 @@ btnLogin.addEventListener('click', (e) =>{
     labelWelcome.textContent = `Welcome Back ${currentAccount.owner.split(' ')[0]}`;
     containerApp.style.opacity = 100;
     // Display movements
+    displayMovements(currentAccount.movements);
 
     // Display balance
+    calcDisplayBalance(currentAccount.movements);
 
     // Display Summary
+    calcDisplaySummary(currentAccount.movements);
+
+
     console.log('LOGIN');
   } else {
     console.log('WRONG PASSWORD');
