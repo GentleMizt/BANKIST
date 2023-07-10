@@ -395,3 +395,6 @@ const totalDepositsUsd = movements
 
 ////////////////////////// ---------------  THE FIND METHOD ------------- //////////////////////////
 
+// Using the find method, we can retrieve an element of an array based on a certain condition.
+
+
