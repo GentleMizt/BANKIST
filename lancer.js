@@ -407,5 +407,9 @@ console.log(movements);
 console.log(firstWithdrawal);
 
 
-const account = accounts.find(acc => acc.owner === 'Jessica Davis');
-console.log(account);
+// const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+// console.log(account);
+
+for (const account of accounts){
+  account.owner === 'Jessica Davis';
+}
