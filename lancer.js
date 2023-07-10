@@ -288,7 +288,7 @@ const calcAverageHumanAge = ages => {
 
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
-console.log(avg1, avg2);
+// console.log(avg1, avg2);
 
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
@@ -402,4 +402,7 @@ const totalDepositsUsd = movements
 // Unlike the filter method, it does not return a new array, instead it retrieves / returns the first element that satisfies that condition.
 
 
-movements.find(mov => mov < 0)
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(movements);
+console.log(firstWithdrawal);
+
