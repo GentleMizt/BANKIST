@@ -131,7 +131,8 @@ btnLogin.addEventListener('click', (e) =>{
 
     // Clearing Input Fields;
    inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
-
+   inputLoginPin.blur();
+   
     // Display movements
     displayMovements(currentAccount.movements);
 
