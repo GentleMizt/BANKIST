@@ -119,19 +119,23 @@ createUsernames(accounts);
 // EVENT HANDLERS
 let currentAccount;
 
-btnLogin.addEventListener('click', (e) =>{
+btnLogin.addEventListener('click', e => {
   // PREVENTING FORM FROM SUBMITTING
   e.preventDefault();
 
-  currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and Welcome Message
-    labelWelcome.textContent = `Welcome Back ${currentAccount.owner.split(' ')[0]}`;
+    labelWelcome.textContent = `Welcome Back ${
+      currentAccount.owner.split(' ')[0]
+    }`;
     containerApp.style.opacity = 100;
 
     // Clearing Input Fields;
-   inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
-   inputLoginPin.blur();
+    inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
+    inputLoginPin.blur();
 
     // Display movements
     displayMovements(currentAccount.movements);
@@ -141,10 +145,8 @@ btnLogin.addEventListener('click', (e) =>{
 
     // Display Summary
     calcDisplaySummary(currentAccount);
-
   }
-
-})
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -419,28 +421,25 @@ const totalDepositsUsd = movements
 // Chaining should not be over used, instead it should be optimized. It can cause performance issues when it involves really large arrays in large scale applications..
 // It's bad practice in Javascript to chain methods that mutates the original array. e.g the SPLICE METHOD, THE REVERSE METHOD.
 
-
 ////////////////////////// ---------------  THE FIND METHOD ------------- //////////////////////////
 
 // Using the find method, we can retrieve an element of an array based on a certain condition.
-// The find method is also another kind of method that loops over an array and what it does when looping 
+// The find method is also another kind of method that loops over an array and what it does when looping
 // is that it retrieves a particular element of the array. It also takes in a call back function.
 // Just like the filter method, the find method takes in a call back function that returns a boolean.
 // Unlike the filter method, it does not return a new array, instead it retrieves / returns the first element that satisfies that condition.
-
 
 const firstWithdrawal = movements.find(mov => mov < 0);
 // console.log(movements);
 // console.log(firstWithdrawal);
 
-
 // const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 // console.log(account);
 
 let acc = [];
-for (const account of accounts){
+for (const account of accounts) {
   if (account.owner === 'Jessica Davis') {
-    acc.push(account)
+    acc.push(account);
     // console.log(acc);
   }
 }
