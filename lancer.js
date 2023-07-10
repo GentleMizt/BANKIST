@@ -84,20 +84,20 @@ const calcDisplayBalance = function (movements) {
   labelBalance.textContent = `${balance}€`;
 };
 
-const calcDisplaySummary = function (movements) {
-  const incomes = movements
+const calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
 
-  const outgoings = movements
+  const outgoings = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(outgoings)}€`;
 
-  const interest = movements
+  const interest = acc.movements
     .filter(mov => mov > 0)
-    .map(deposit => (deposit * 1.2) / 100)
+    .map(deposit => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
       return int >= 1;
     })
@@ -132,7 +132,7 @@ btnLogin.addEventListener('click', (e) =>{
     // Clearing Input Fields;
    inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
    inputLoginPin.blur();
-   
+
     // Display movements
     displayMovements(currentAccount.movements);
 
@@ -142,9 +142,6 @@ btnLogin.addEventListener('click', (e) =>{
     // Display Summary
     calcDisplaySummary(currentAccount.movements);
 
-    console.log('LOGIN');
-  } else {
-    console.log('WRONG PASSWORD');
   }
 
 })
