@@ -13,7 +13,7 @@ const account1 = {
 };
 
 const account2 = {
-  owner: 'Mapelujo Abdulkareem',
+  owner: 'Abdulkareem Mapelujo',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
@@ -128,6 +128,13 @@ btnLogin.addEventListener('click', (e) =>{
 
   currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI and Welcome Message
+    labelWelcome.textContent = `Welcome Back ${currentAccount.owner.split(' ')[0]}`
+    // Display movements
+
+    // Display balance
+
+    // Display Summary
     console.log('LOGIN');
   } else {
     console.log('WRONG PASSWORD');
