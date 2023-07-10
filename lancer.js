@@ -119,6 +119,12 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
+// EVENT HANDLERS
+
+btnLogin.addEventListener('click', ()=>{
+  console.log('LOGIN');
+})
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
