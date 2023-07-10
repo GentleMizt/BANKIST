@@ -123,10 +123,7 @@ btnLogin.addEventListener('click', (e) =>{
   // PREVENTING FORM FROM SUBMITTING
   e.preventDefault();
 
-  // Clearing Input Fields;
-
-  inputLoginUsername = inputLoginPin = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
-
+ 
   currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and Welcome Message
@@ -146,7 +143,9 @@ btnLogin.addEventListener('click', (e) =>{
   } else {
     console.log('WRONG PASSWORD');
   }
-  console.log(currentAccount);
+
+   // Clearing Input Fields;
+   inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
 
 })
 
