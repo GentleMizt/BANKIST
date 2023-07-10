@@ -410,6 +410,10 @@ console.log(firstWithdrawal);
 // const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 // console.log(account);
 
+let acc = [];
 for (const account of accounts){
-  account.owner === 'Jessica Davis';
+  if (account.owner === 'Jessica Davis') {
+    acc.push(account)
+  }
 }
+console.log(acc);
