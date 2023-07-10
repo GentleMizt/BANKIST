@@ -140,7 +140,7 @@ btnLogin.addEventListener('click', (e) =>{
     calcDisplayBalance(currentAccount.movements);
 
     // Display Summary
-    calcDisplaySummary(currentAccount.movements);
+    calcDisplaySummary(currentAccount);
 
   }
 
