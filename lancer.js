@@ -398,5 +398,6 @@ const totalDepositsUsd = movements
 // Using the find method, we can retrieve an element of an array based on a certain condition.
 // The find method is also another kind of method that loops over an array and what it does when looping 
 // is that it retrieves a particular element of the array. It also takes in a call back function.
+// Just like the filter method, the find method takes in a call back function that returns a boolean
 
-movements.find()
+movements.find(mov => mov < 0)
