@@ -277,7 +277,7 @@ const checkData = function (dogsJulia, dogsKate) {
 const datas1 = [5, 2, 4, 1, 15, 8, 3];
 const datas2 = [16, 6, 10, 5, 6, 1, 4];
 
-const calcAverageHumanAge = function (ages) {
+const calcAverageHumanAge = ages => {
   const humanAges = ages
     .map(age => (age <= 2 ? 2 * age : 16 + 4 * age))
     .filter(age => age >= 18)
@@ -287,8 +287,8 @@ const calcAverageHumanAge = function (ages) {
 };
 
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-
-console.log(avg1);
+const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+console.log(avg1, avg2);
 
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
