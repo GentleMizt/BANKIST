@@ -126,8 +126,14 @@ btnLogin.addEventListener('click', (e) =>{
   // PREVENTING FORM FROM SUBMITTING
   e.preventDefault();
 
-  currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value)
+  currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
+  if (currentAccount.pin === Number(inputLoginPin.value)) {
+    console.log('LOGIN');
+  } else {
+    console.log('WRONG PASSWORD');
+  }
   console.log(currentAccount);
+
 })
 
 /////////////////////////////////////////////////
