@@ -414,6 +414,7 @@ let acc = [];
 for (const account of accounts){
   if (account.owner === 'Jessica Davis') {
     acc.push(account)
+    // console.log(acc);
   }
 }
 console.log(acc);
