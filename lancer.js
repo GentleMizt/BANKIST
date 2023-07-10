@@ -127,7 +127,7 @@ btnLogin.addEventListener('click', (e) =>{
   e.preventDefault();
 
   currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
-  if (currentAccount.pin === Number(inputLoginPin.value)) {
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
     console.log('LOGIN');
   } else {
     console.log('WRONG PASSWORD');
