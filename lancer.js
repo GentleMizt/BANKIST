@@ -123,11 +123,16 @@ btnLogin.addEventListener('click', (e) =>{
   // PREVENTING FORM FROM SUBMITTING
   e.preventDefault();
 
+  // Clearing Input Fields;
+
+  inputLoginUsername = inputLoginPin = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
+
   currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and Welcome Message
     labelWelcome.textContent = `Welcome Back ${currentAccount.owner.split(' ')[0]}`;
     containerApp.style.opacity = 100;
+
     // Display movements
     displayMovements(currentAccount.movements);
 
@@ -136,7 +141,6 @@ btnLogin.addEventListener('click', (e) =>{
 
     // Display Summary
     calcDisplaySummary(currentAccount.movements);
-
 
     console.log('LOGIN');
   } else {
