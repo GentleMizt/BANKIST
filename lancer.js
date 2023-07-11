@@ -153,7 +153,8 @@ btnTransfer.addEventListener('click', (e)=>{
   e.preventDefault();
 
   const amount = Number(inputTransferAmount.value());
-  
+  const receiverAcc = inputTransferTo.value;
+
 })
 
 /////////////////////////////////////////////////
