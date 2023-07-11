@@ -151,6 +151,9 @@ btnLogin.addEventListener('click', e => {
 // IMPLEMENTING TRANSFERS
 btnTransfer.addEventListener('click', (e)=>{
   e.preventDefault();
+
+  const amount = Number(inputTransferAmount.value());
+  
 })
 
 /////////////////////////////////////////////////
