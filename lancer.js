@@ -149,19 +149,25 @@ btnLogin.addEventListener('click', e => {
 });
 
 // IMPLEMENTING TRANSFERS
-btnTransfer.addEventListener('click', (e)=>{
+btnTransfer.addEventListener('click', e => {
   e.preventDefault();
 
   const amount = Number(inputTransferAmount.value);
-  const receiverAcc = accounts.find(acc => acc.username === inputTransferTo.value);
+  const receiverAcc = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
   console.log(amount, receiverAcc);
 
-  if (amount > 0 && currentAccount.balance >= inputTransferAmount.value && receiverAcc?.username !== currentAccount.username) {
+  if (
+    amount > 0 &&
+    currentAccount.balance >= inputTransferAmount.value &&
+    receiverAcc?.username !== currentAccount.username
+  ) {
     console.log('Transfer valid');
   } else {
     console.log('Transfer Invalid');
   }
-})
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
