@@ -116,7 +116,7 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
-const updateUI = function (acc){
+const updateUI = function (acc) {
   // Display movements
   displayMovements(acc.movements);
 
@@ -125,7 +125,7 @@ const updateUI = function (acc){
 
   // Display Summary
   calcDisplaySummary(acc);
-}
+};
 
 // EVENT HANDLERS
 let currentAccount;
@@ -172,7 +172,6 @@ btnTransfer.addEventListener('click', e => {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
     updateUI(currentAccount);
-
   } else {
     alert('Transfer Invalid');
   }
