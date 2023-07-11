@@ -161,7 +161,10 @@ btnTransfer.addEventListener('click', e => {
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value
   );
-  console.log(amount, receiverAcc);
+
+  inputTransferAmount.value = inputTransferTo.value = '';
+  inputTransferAmount.blur();
+
 
   if (
     amount > 0 &&
@@ -172,8 +175,6 @@ btnTransfer.addEventListener('click', e => {
     // featuring the debitation and creditation between both accounts involved.
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
-    inputTransferAmount.value = inputTransferTo.value = '';
-    inputTransferAmount.blur();
 
     // Updating the UI 
     updateUI(currentAccount);
