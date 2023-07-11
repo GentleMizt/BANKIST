@@ -149,7 +149,9 @@ btnLogin.addEventListener('click', e => {
 });
 
 // IMPLEMENTING TRANSFERS
-
+btnTransfer.addEventListener('click', (e)=>{
+  e.preventDefault();
+})
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
