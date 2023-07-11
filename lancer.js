@@ -116,6 +116,17 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
+const updateUI = function (acc){
+  // Display movements
+  displayMovements(acc.movements);
+
+  // Display balance
+  calcDisplayBalance(acc);
+
+  // Display Summary
+  calcDisplaySummary(acc);
+}
+
 // EVENT HANDLERS
 let currentAccount;
 
@@ -137,14 +148,7 @@ btnLogin.addEventListener('click', e => {
     inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
     inputLoginPin.blur();
 
-    // Display movements
-    displayMovements(currentAccount.movements);
-
-    // Display balance
-    calcDisplayBalance(currentAccount);
-
-    // Display Summary
-    calcDisplaySummary(currentAccount);
+    updateUI(currentAccount);
   }
 });
 
@@ -167,6 +171,7 @@ btnTransfer.addEventListener('click', e => {
     // featuring the debitation and creditation between both accounts involved.
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
+
   } else {
     alert('Transfer Invalid');
   }
