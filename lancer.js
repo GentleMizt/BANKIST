@@ -160,12 +160,15 @@ btnTransfer.addEventListener('click', e => {
 
   if (
     amount > 0 &&
+    receiverAcc &&
     currentAccount.balance >= inputTransferAmount.value &&
     receiverAcc?.username !== currentAccount.username
   ) {
-    console.log('Transfer valid');
+    // featuring the debitation and creditation between both accounts involved.
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
   } else {
-    console.log('Transfer Invalid');
+    alert('Transfer Invalid');
   }
 });
 
