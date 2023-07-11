@@ -172,6 +172,7 @@ btnTransfer.addEventListener('click', e => {
     // featuring the debitation and creditation between both accounts involved.
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
+    
 
     // Updating the UI 
     updateUI(currentAccount);
