@@ -187,8 +187,8 @@ btnClose.addEventListener('click', e => {
   e.preventDefault();
 
   if (
-    inputCloseUsername.value === inputLoginUsername.value &&
-    inputClosePin.value === inputLoginPin.value
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
   ) {
     console.log('Conditions satisfied');
   }
