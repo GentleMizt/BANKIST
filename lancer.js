@@ -190,7 +190,12 @@ btnClose.addEventListener('click', e => {
     inputCloseUsername.value === currentAccount.username &&
     Number(inputClosePin.value) === currentAccount.pin
   ) {
-    console.log('Conditions satisfied');
+
+    // Deleting the current account using the splice method
+    const index = accounts.findIndex((acc)=>{
+      acc.username === currentAccount.username
+    })
+    accounts.splice(index, 1);
   }
 });
 
