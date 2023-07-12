@@ -193,7 +193,7 @@ btnClose.addEventListener('click', e => {
 
     // Deleting the current account using the splice method
     const index = accounts.findIndex((acc)=>{
-      acc.username === currentAccount.username
+      return acc.username === currentAccount.username
     })
     // accounts.splice(index, 1);
     console.log(index);
