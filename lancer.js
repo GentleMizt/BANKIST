@@ -186,6 +186,10 @@ btnTransfer.addEventListener('click', e => {
 // IMPLEMENTING CLOSING OF ACCOUNT
 btnClose.addEventListener('click', (e)=>{
   e.preventDefault();
+
+  // if () {
+    
+  // }
 })
 
 /////////////////////////////////////////////////
