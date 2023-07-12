@@ -190,6 +190,7 @@ btnClose.addEventListener('click', e => {
     inputCloseUsername.value === inputLoginUsername.value &&
     inputClosePin.value === inputLoginPin.value
   ) {
+    console.log('Conditions satisfied');
   }
 });
 
