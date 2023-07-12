@@ -479,3 +479,7 @@ for (const account of accounts) {
   }
 }
 // console.log(acc);
+
+
+///// ---------------- THE FIND INDEX METHOD ----------- ///////////////
+// It works almost the same way as the find method just that the find index method returns the index of the element and not the element itself
