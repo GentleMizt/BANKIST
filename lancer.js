@@ -148,7 +148,7 @@ btnLogin.addEventListener('click', e => {
     inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
     inputLoginPin.blur();
 
-    // Updating the UI 
+    // Updating the UI
     updateUI(currentAccount);
   }
 });
@@ -165,7 +165,6 @@ btnTransfer.addEventListener('click', e => {
   inputTransferAmount.value = inputTransferTo.value = '';
   inputTransferAmount.blur();
 
-
   if (
     amount > 0 &&
     receiverAcc &&
@@ -176,7 +175,7 @@ btnTransfer.addEventListener('click', e => {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
 
-    // Updating the UI 
+    // Updating the UI
     updateUI(currentAccount);
   } else {
     alert('Transfer Invalid');
@@ -184,13 +183,15 @@ btnTransfer.addEventListener('click', e => {
 });
 
 // IMPLEMENTING CLOSING OF ACCOUNT
-btnClose.addEventListener('click', (e)=>{
+btnClose.addEventListener('click', e => {
   e.preventDefault();
 
-  if (inputCloseUsername.value === inputLoginUsername.value && inputClosePin.value === inputLoginPin.value) {
-    
+  if (
+    inputCloseUsername.value === inputLoginUsername.value &&
+    inputClosePin.value === inputLoginPin.value
+  ) {
   }
-})
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -488,7 +489,6 @@ for (const account of accounts) {
   }
 }
 // console.log(acc);
-
 
 ///// ---------------- THE FIND INDEX METHOD ----------- ///////////////
 // It works almost the same way as the find method just that the find index method returns the index of the element and not the element itself
