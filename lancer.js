@@ -203,6 +203,8 @@ btnClose.addEventListener('click', e => {
     // Logging out the display on the UI.
     containerApp.style.opacity = 0;
   }
+  inputTransferAmount.value = inputTransferTo.value = '';
+  inputTransferAmount.blur();
 });
 
 /////////////////////////////////////////////////
