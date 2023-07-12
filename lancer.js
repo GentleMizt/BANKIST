@@ -183,6 +183,7 @@ btnTransfer.addEventListener('click', e => {
 });
 
 // IMPLEMENTING CLOSING OF ACCOUNT
+
 btnClose.addEventListener('click', e => {
   e.preventDefault();
 
@@ -195,8 +196,12 @@ btnClose.addEventListener('click', e => {
     const index = accounts.findIndex((acc)=>{
       return acc.username === currentAccount.username
     })
-    // accounts.splice(index, 1);
-    console.log(index);
+
+    // Deleting the account
+    accounts.splice(index, 1);
+
+    // Logging out the display on the UI.
+    containerApp.style.opacity = 0;
   }
 });
 
@@ -499,3 +504,5 @@ for (const account of accounts) {
 
 ///// ---------------- THE FIND INDEX METHOD ----------- ///////////////
 // It works almost the same way as the find method just that the find index method returns the index of the element and not the element itself
+// It works with a condition that returns a true or false value.
+//
