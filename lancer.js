@@ -187,9 +187,9 @@ btnTransfer.addEventListener('click', e => {
 btnClose.addEventListener('click', (e)=>{
   e.preventDefault();
 
-  // if () {
+  if (inputCloseUsername.value === inputLoginUsername.value && inputClosePin.value === inputLoginPin.value) {
     
-  // }
+  }
 })
 
 /////////////////////////////////////////////////
