@@ -198,6 +198,7 @@ btnLoan.addEventListener('click', e => {
   }
 
   inputLoanAmount.value = '';
+  inputLoanAmount.blur();
 });
 
 // IMPLEMENTING CLOSING OF ACCOUNT (USING THE FINDINDEX METHOD)
