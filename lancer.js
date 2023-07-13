@@ -508,3 +508,8 @@ for (const account of accounts) {
 // It works almost the same way as the find method just that the find index method returns the index of the element and not the element itself
 // It works with a condition that returns a true or false value.
 //
+
+/////////////// ----------------- SOME AND EVERY METHOD -------------------- ///////////////////////
+console.log(movements);
+console.log(movements.includes(-130)); // The include methods returns true if what is specified is completely equal.
+
