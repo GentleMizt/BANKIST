@@ -188,6 +188,10 @@ btnTransfer.addEventListener('click', e => {
 btnClose.addEventListener('click', (e)=>{
   e.preventDefault();
 
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= (amount * 0.1))) {
+     
+  }
   
 })
 
