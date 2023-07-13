@@ -204,7 +204,6 @@ btnLoan.addEventListener('click', e => {
 });
 
 // IMPLEMENTING CLOSING OF ACCOUNT (USING THE FINDINDEX METHOD)
-
 btnClose.addEventListener('click', e => {
   e.preventDefault();
 
@@ -548,12 +547,19 @@ const anyDeposits = movements.some(mov => mov > 1500); // checks for conditions.
 // The difference however is that the every method only returns true if all the element in that array satisfies the specified condition.
 // The some method however just needs one of the elements in that particular array to satisfy that condition for it to return true.
 
-console.log(movements.every(mov => mov > 0));
-console.log(account4.movements.every(mov => mov > 0));
+// console.log(movements.every(mov => mov > 0));
+// console.log(account4.movements.every(mov => mov > 0));
 
 // Separate Call Backs
 const deposit = mov => mov > 0;
+// console.log(movements.some(deposit));
+// console.log(movements.every(deposit));
+// console.log(movements.filter(deposit));
 
-console.log(movements.some(deposit));
-console.log(movements.every(deposit));
-console.log(movements.filter(deposit));
+
+////////////// ----------------- FLAT AND FLATMAP METHODS --------------------- //////////////////////////
+const arr = [[1,2,3], [4,5,6], 7,8];
+// The flat and flatMap methods are new methods that were introduced in 2019.
+console.log(arr.flat()); // It does not take in any call backs.
+
+const arrDeep
