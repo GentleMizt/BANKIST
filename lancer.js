@@ -512,7 +512,10 @@ for (const account of accounts) {
 /////////////// ----------------- SOME AND EVERY METHOD -------------------- ///////////////////////
 console.log(movements);
 console.log(movements.includes(-130)); 
+
 // The include methods returns true if what is specified is completely equal.
 // However, if we want to check if an array includes a certain condition, the includes method won't do that.
 // That is where the some and every method comes in
 
+const anyDeposits = movements.some(mov => mov > 0);
+console.log(anyDeposits);
