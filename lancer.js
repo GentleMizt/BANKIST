@@ -530,14 +530,30 @@ for (const account of accounts) {
 //
 
 /////////////// ----------------- SOME AND EVERY METHOD -------------------- ///////////////////////
-console.log(movements);
-console.log(movements.includes(-130)); // checks only for equality.
+// console.log(movements);
+// console.log(movements.includes(-130)); // checks only for equality.
 
 // The include methods returns true if what is specified is completely equal.
 // However, if we want to check if an array includes a certain condition, the includes method won't do that.
 // That is where the some and every method comes in
 
+// SOME: CONDITION
 const anyDeposits = movements.some(mov => mov > 1500); // checks for conditions.
 // what the some method does is that it takes in a callback function, and in that callback function a condition is specified
 // if any value in the array matches or holds true for that condition, the method returns true.
-console.log(anyDeposits);
+// console.log(anyDeposits);
+
+// EVERY: 
+// The every method is similar to the some method in the sense that it also works based on conditions..
+// The difference however is that the every method only returns true if all the element in that array satisfies the specified condition.
+// The some method however just needs one of the elements in that particular array to satisfy that condition for it to return true.
+
+console.log(movements.every(mov => mov > 0));
+console.log(account4.movements.every(mov => mov > 0));
+
+// Separate Call Backs
+const deposit = mov => mov > 0;
+
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
