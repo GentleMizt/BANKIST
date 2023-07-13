@@ -185,6 +185,11 @@ btnTransfer.addEventListener('click', e => {
 });
 
 // REQUESTING A LOAN FROM THE BANK (USING THE SOME METHOD)
+btnClose.addEventListener('click', (e)=>{
+  e.preventDefault();
+
+  
+})
 
 // IMPLEMENTING CLOSING OF ACCOUNT (USING THE FINDINDEX METHOD)
 
