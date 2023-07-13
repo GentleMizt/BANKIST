@@ -195,6 +195,8 @@ btnLoan.addEventListener('click', e => {
 
     // Updating the UI
     updateUI(currentAccount);
+  } else {
+    alert('You do not qualify to take this loan');
   }
 
   inputLoanAmount.value = '';
