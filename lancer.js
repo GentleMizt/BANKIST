@@ -518,4 +518,7 @@ console.log(movements.includes(-130)); // checks only for equality.
 // That is where the some and every method comes in
 
 const anyDeposits = movements.some(mov => mov > 1500); // checks for conditions.
+// what the some method does is that it takes in a callback function, and in that callback function a condition is specified
+// if any value in the array matches or holds true for that condition, the method returns true.
+
 console.log(anyDeposits);
