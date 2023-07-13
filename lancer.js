@@ -130,8 +130,10 @@ const updateUI = function (acc) {
 // EVENT HANDLERS
 let currentAccount;
 
+// IMPLEMENTING THE LOGIN FUNCTION (USING THE FIND METHOD)
+
 btnLogin.addEventListener('click', e => {
-  // PREVENTING FORM FROM SUBMITTING
+  // PREVENTING FORM FROM SUBMITTING 
   e.preventDefault();
 
   currentAccount = accounts.find(
@@ -153,7 +155,7 @@ btnLogin.addEventListener('click', e => {
   }
 });
 
-// IMPLEMENTING TRANSFERS
+// IMPLEMENTING TRANSFERS 
 btnTransfer.addEventListener('click', e => {
   e.preventDefault();
 
@@ -182,7 +184,9 @@ btnTransfer.addEventListener('click', e => {
   }
 });
 
-// IMPLEMENTING CLOSING OF ACCOUNT
+// REQUESTING A LOAN FROM THE BANK (USING THE SOME METHOD)
+
+// IMPLEMENTING CLOSING OF ACCOUNT (USING THE FINDINDEX METHOD)
 
 btnClose.addEventListener('click', e => {
   e.preventDefault();
@@ -520,5 +524,4 @@ console.log(movements.includes(-130)); // checks only for equality.
 const anyDeposits = movements.some(mov => mov > 1500); // checks for conditions.
 // what the some method does is that it takes in a callback function, and in that callback function a condition is specified
 // if any value in the array matches or holds true for that condition, the method returns true.
-
 console.log(anyDeposits);
