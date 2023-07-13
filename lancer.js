@@ -190,7 +190,14 @@ btnClose.addEventListener('click', e => {
 
   const amount = Number(inputLoanAmount.value);
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    // Adding the amount into the movement array
+    currentAccount.movements.push(amount);
+
+    // Updating the UI
+    updateUI(currentAccount);
   }
+
+  Number(inputLoanAmount.value) = ''
 });
 
 // IMPLEMENTING CLOSING OF ACCOUNT (USING THE FINDINDEX METHOD)
