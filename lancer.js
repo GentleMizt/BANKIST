@@ -517,5 +517,5 @@ console.log(movements.includes(-130));
 // However, if we want to check if an array includes a certain condition, the includes method won't do that.
 // That is where the some and every method comes in
 
-const anyDeposits = movements.some(mov => mov > 0);
+const anyDeposits = movements.some(mov => mov > 5000);
 console.log(anyDeposits);
