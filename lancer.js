@@ -543,7 +543,7 @@ const anyDeposits = movements.some(mov => mov > 1500); // checks for conditions.
 // if any value in the array matches or holds true for that condition, the method returns true.
 // console.log(anyDeposits);
 
-// EVERY: 
+// EVERY:
 // The every method is similar to the some method in the sense that it also works based on conditions..
 // The difference however is that the every method only returns true if all the element in that array satisfies the specified condition.
 // The some method however just needs one of the elements in that particular array to satisfy that condition for it to return true.
