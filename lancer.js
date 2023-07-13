@@ -185,7 +185,7 @@ btnTransfer.addEventListener('click', e => {
 });
 
 // REQUESTING A LOAN FROM THE BANK (USING THE SOME METHOD)
-btnClose.addEventListener('click', e => {
+btnLoan.addEventListener('click', e => {
   e.preventDefault();
 
   const amount = Number(inputLoanAmount.value);
@@ -197,7 +197,7 @@ btnClose.addEventListener('click', e => {
     updateUI(currentAccount);
   }
 
-  Number(inputLoanAmount.value) = ''
+  inputLoanAmount.value = '';
 });
 
 // IMPLEMENTING CLOSING OF ACCOUNT (USING THE FINDINDEX METHOD)
