@@ -133,7 +133,7 @@ let currentAccount;
 // IMPLEMENTING THE LOGIN FUNCTION (USING THE FIND METHOD)
 
 btnLogin.addEventListener('click', e => {
-  // PREVENTING FORM FROM SUBMITTING 
+  // PREVENTING FORM FROM SUBMITTING
   e.preventDefault();
 
   currentAccount = accounts.find(
@@ -155,7 +155,7 @@ btnLogin.addEventListener('click', e => {
   }
 });
 
-// IMPLEMENTING TRANSFERS 
+// IMPLEMENTING TRANSFERS
 btnTransfer.addEventListener('click', e => {
   e.preventDefault();
 
@@ -185,15 +185,13 @@ btnTransfer.addEventListener('click', e => {
 });
 
 // REQUESTING A LOAN FROM THE BANK (USING THE SOME METHOD)
-btnClose.addEventListener('click', (e)=>{
+btnClose.addEventListener('click', e => {
   e.preventDefault();
 
   const amount = Number(inputLoanAmount.value);
-  if (amount > 0 && currentAccount.movements.some(mov => mov >= (amount * 0.1))) {
-     
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
   }
-  
-})
+});
 
 // IMPLEMENTING CLOSING OF ACCOUNT (USING THE FINDINDEX METHOD)
 
@@ -204,11 +202,10 @@ btnClose.addEventListener('click', e => {
     inputCloseUsername.value === currentAccount.username &&
     Number(inputClosePin.value) === currentAccount.pin
   ) {
-
     // Deleting the current account using the splice method
-    const index = accounts.findIndex((acc)=>{
-      return acc.username === currentAccount.username
-    })
+    const index = accounts.findIndex(acc => {
+      return acc.username === currentAccount.username;
+    });
 
     // Deleting the account
     accounts.splice(index, 1);
