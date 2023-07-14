@@ -556,16 +556,18 @@ const deposit = mov => mov > 0;
 // console.log(movements.every(deposit));
 // console.log(movements.filter(deposit));
 
-
 ////////////// ----------------- FLAT AND FLATMAP METHODS --------------------- //////////////////////////
-const arr = [[1,2,3], [4,5,6], 7,8];
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 // The flat and flatMap methods are new methods that were introduced in 2019.
 console.log(arr.flat()); // It does not take in any call backs.
 
-const arrDeep = [[[1,2],3,], [4, [5,6]], 7,8];
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat(2)); // goes in 2 levels deep and flatens the array.
 
-const accountMovements = accounts.map(acc => acc.movements).flat().reduce((acc, mov) => acc + mov, 0)
+const accountMovements = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
 console.log(accountMovements);
 // const allMovements = accountMovements.flat().reduce((acc, mov) => acc + mov, 0);
 // console.log(allMovements);
