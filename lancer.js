@@ -563,4 +563,4 @@ const arr = [[1,2,3], [4,5,6], 7,8];
 console.log(arr.flat()); // It does not take in any call backs.
 
 const arrDeep = [[[1,2],3,], [4, [5,6]], 7,8];
-console.log(arrDeep.flat());
+console.log(arrDeep.flat(2));
