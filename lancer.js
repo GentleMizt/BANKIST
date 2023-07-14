@@ -584,5 +584,15 @@ console.log(overallMoveementsBalance2);
 
 
 /////////////////////// ------------------- SORTING ARRAYS ---------------------- /////////////////////////////
+
+// Strings
 const owners = ['Lancer', 'Jonas', 'Faiq', 'Faiza'];
 console.log(owners.sort()); // Sorts the array alphabetically from A - Z;
+
+// Sorting Mutates the original array, meaning it directly affects the array when it was initially called.
+
+//  Numbers
+console.log(movements);
+console.log(movements.sort());
+
+// when calling the sort method on an array of numbers, it treats the numbers in the array as though it was a string, which is not what we want.
