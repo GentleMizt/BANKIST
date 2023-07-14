@@ -581,3 +581,6 @@ const overallMoveementsBalance2 = accounts
 console.log(overallMoveementsBalance2);
 
 // The flatMap method only goes one level deep and it cannot be changed or modified. If going deeper than 1 level is required, the flat method is to be used.
+
+
+/////////////////////// ------------------- SORTING ARRAYS ---------------------- /////////////////////////////
