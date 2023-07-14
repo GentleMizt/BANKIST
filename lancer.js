@@ -576,6 +576,8 @@ console.log(overallMoveementsBalance);
 
 // Using the flatMap method
 const overallMoveementsBalance2 = accounts
-  .flatMap(acc => acc.movements)
+  .flatMap(acc => acc.movements)  
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overallMoveementsBalance2);
+
+// The flatMap method only goes one level deep and it cannot be changed or modified. If going deeper than 1 level is required, the flat method is to be used.
