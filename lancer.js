@@ -593,6 +593,19 @@ console.log(owners.sort()); // Sorts the array alphabetically from A - Z;
 
 //  Numbers
 console.log(movements);
-console.log(movements.sort());
+// console.log(movements.sort());
 
 // when calling the sort method on an array of numbers, it treats the numbers in the array as though it was a string, which is not what we want.
+// To fix this, a COMPARE CALL BACK FUNCTION has to be passed into the sort method as it is called.
+// This call back function takes in 2 parameters, the first which is usually the CURRENT VALUE, while the second is the NEXT value.
+
+// return < 0, A before B
+// return > 0 B before A
+movements.sort((a,b) => {
+  if (a > b)
+    return 1;
+  if (b > a) 
+    return -1
+});
+
+console.log(movements);
