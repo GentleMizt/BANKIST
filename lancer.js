@@ -604,7 +604,7 @@ console.log(movements);
 movements.sort((a,b) => {
   if (a > b)
     return 1;
-  if (b > a) 
+  if (a < b) 
     return -1
 });
 
