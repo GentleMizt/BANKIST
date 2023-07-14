@@ -564,6 +564,7 @@ console.log(arr.flat()); // It does not take in any call backs.
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat(2)); // goes in 2 levels deep and flatens the array.
 
+// Using the flat method
 const overallMoveementsBalance = accounts
   .map(acc => acc.movements)
   .flat()
@@ -572,3 +573,9 @@ console.log(overallMoveementsBalance);
 
 // As a result of developers chaining the map and then the flat method immediately, a new method was introduced called the FLATMAP method.
 // It combines both the map and flat into one convenient method.
+
+// Using the flatMap method
+const overallMoveementsBalance2 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallMoveementsBalance2);
