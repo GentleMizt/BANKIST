@@ -571,3 +571,4 @@ const overallMoveementsBalance = accounts
 console.log(overallMoveementsBalance);
 
 // As a result of developers chaining the map and then the flat method immediately, a new method was introduced called the FLATMAP method.
+// It combines both the map and flat into one convenient method.
