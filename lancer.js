@@ -584,3 +584,5 @@ console.log(overallMoveementsBalance2);
 
 
 /////////////////////// ------------------- SORTING ARRAYS ---------------------- /////////////////////////////
+const owners = ['Lancer', 'Jonas', 'Faiq', 'Faiza'];
+console.log(owners.sort()); // Sorts
