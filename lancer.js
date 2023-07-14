@@ -562,4 +562,4 @@ const arr = [[1,2,3], [4,5,6], 7,8];
 // The flat and flatMap methods are new methods that were introduced in 2019.
 console.log(arr.flat()); // It does not take in any call backs.
 
-const arrDeep = [[[1,2],3,], ]
+const arrDeep = [[[1,2],3,], [4, [5,6]], 7,8];
