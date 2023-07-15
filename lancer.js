@@ -65,7 +65,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
 
-  const movs = sort ? movements.slice().sort((a,b) => a - b) : movements;
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
 
   movs.forEach((mov, i) => {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
@@ -233,12 +233,11 @@ btnClose.addEventListener('click', e => {
 // Initializing a variable to keep track of the sort boolean
 
 let sorted = false;
-btnSort.addEventListener('click', (e) => {
+btnSort.addEventListener('click', e => {
   e.preventDefault();
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
-
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -590,12 +589,11 @@ console.log(overallMoveementsBalance);
 
 // Using the flatMap method
 const overallMoveementsBalance2 = accounts
-  .flatMap(acc => acc.movements)  
+  .flatMap(acc => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overallMoveementsBalance2);
 
 // The flatMap method only goes one level deep and it cannot be changed or modified. If going deeper than 1 level is required, the flat method is to be used.
-
 
 /////////////////////// ------------------- SORTING ARRAYS ---------------------- /////////////////////////////
 
@@ -621,24 +619,23 @@ console.log(movements);
 // movements.sort((a,b) => {
 //   if (a > b)
 //     return 1;
-//   if (a < b) 
+//   if (a < b)
 //     return -1
 // });
 
 // Improving the code
-movements.sort((a,b) => a - b);
+movements.sort((a, b) => a - b);
 console.log(`In Ascending Order ${movements.join(', ')}`);
-
 
 // SORTING IN DESCENDING ORDER
 // movements.sort((a,b) => {
 //   if (a > b)
 //     return -1;
-//   if (a < b) 
+//   if (a < b)
 //     return 1
 // });
 
-movements.sort((a,b) => b - a)
+movements.sort((a, b) => b - a);
 console.log(`In Descending Order ${movements.join(', ')}`);
 
 // If the array is a mixed one i.e it contains both strings and numbers, then it is advisable not to use the sort method at all as there would be no point in doing so.
@@ -655,14 +652,14 @@ console.log(x);
 
 // FILL METHOD ON DEFINED ARRAYS
 // the fill method can also be applied on arrays that have already been defined and not just empty arrays.
-const arr3 = new Array(1,2,3,4,5,6,7); // creates an array of the elements passed into it as arguments.
+const arr3 = new Array(1, 2, 3, 4, 5, 6, 7); // creates an array of the elements passed into it as arguments.
 console.log(arr3);
-arr3.fill(50, 2,6)
+arr3.fill(50, 2, 6);
 console.log(arr3);
 
 // Array.from
-const y = Array.from({length: 7}, () => 1)
+const y = Array.from({ length: 7 }, () => 1);
 console.log(y);
 
-const z = Array.from({length: 7}, (cur, i) => i + 1)
+const z = Array.from({ length: 7 }, (cur, i) => i + 1);
 console.log(z);
