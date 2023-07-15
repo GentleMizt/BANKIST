@@ -609,5 +609,13 @@ movements.sort((a,b) => {
   if (a < b) 
     return -1
 });
+console.log(movements);
 
+// SORTING IN DESCENDING ORDER
+movements.sort((a,b) => {
+  if (a > b)
+    return 1;
+  if (a < b) 
+    return -1
+});
 console.log(movements);
