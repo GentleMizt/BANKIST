@@ -609,13 +609,12 @@ movements.sort((a,b) => {
   if (a < b) 
     return -1
 });
-console.log(movements);
-
+console.log(`In Ascending Order ${movements.join(', ')}`);
 // SORTING IN DESCENDING ORDER
 movements.sort((a,b) => {
   if (a > b)
-    return 1;
+    return -1;
   if (a < b) 
-    return -1
+    return 1
 });
-console.log(movements);
+console.log(`In Descending Order ${movements.join(', ')}`);
