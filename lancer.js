@@ -646,15 +646,16 @@ console.log(`In Descending Order ${movements.join(', ')}`);
 ////////////// -------------- MORE METHODS OF CREATING ND FILLING ARRAYS ---------------- ////////////////////////////
 // How to programmatically create and fill arrays.
 
-const arr3 = new Array(1,2,3,4,5,6,7); // creates an array of the elements passed into it as arguments.
-
+// EMPTY ARRAYS + FILL METHOD
 const x = new Array(7); // creates an array with 7 empty spaces
 console.log(x);
 // x.fill(1) // fills up the array with the element specified in the argument, it mutates the underlying array.
-x.fill(1,3, 5)
+// x.fill(1,3, 5)
 console.log(x);
 
+// FILL METHOD ON DEFINED ARRAYS
 // the fill method can also be applied on arrays that have already been defined and not just empty arrays.
+const arr3 = new Array(1,2,3,4,5,6,7); // creates an array of the elements passed into it as arguments.
 console.log(arr3);
 arr3.fill(50, 2,6)
 console.log(arr3);
