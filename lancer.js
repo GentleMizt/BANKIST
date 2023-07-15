@@ -661,5 +661,9 @@ console.log(arr3);
 const y = Array.from({ length: 7 }, () => 1);
 console.log(y);
 
-const z = Array.from({ length: 7 }, (cur, i) => i + 1);
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(z);
+
+// assignment
+const diceRolls = Array.from({length: 100}, () => Math.ceil(Math.random() * 6))
+console.log(diceRolls);
