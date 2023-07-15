@@ -724,7 +724,7 @@ const converTitleCase = (title) => {
   const exceptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
 
 
-  const titleCase = title.toLowerCase().split(' ').map(word => word[0].toUpperCase() + word.slice(1))
+  const titleCase = title.toLowerCase().split(' ').map(word => exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1))
   return titleCase;
 }
 console.log(converTitleCase('this is a nice title'));
