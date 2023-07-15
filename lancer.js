@@ -670,19 +670,25 @@ const z = Array.from({ length: 7 }, (_, i) => i + 1);
 // console.log(z);
 
 // assignment
-const diceRolls = Array.from({length: 100}, () => Math.ceil(Math.random() * 6))
+const diceRolls = Array.from({ length: 100 }, () =>
+  Math.ceil(Math.random() * 6)
+);
 // console.log(diceRolls);
 
-
-labelBalance.addEventListener('click', (e) => {
-  const movementsUI = Array.from(document.querySelectorAll('.movements__value'), el => Number(el.textContent.replace('€', '')));
+labelBalance.addEventListener('click', e => {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ''))
+  );
   // console.log(movementsUI.map(el => Number(el.textContent.replace('€', ''))));
   // console.log(movementsUI);
 });
 
-
-////////////////////// -------------------- SUMMARY ON WHICH ARRAY METHOD TO USE ----------------- /////////////////////// 
+////////////////////// -------------------- SUMMARY ON WHICH ARRAY METHOD TO USE ----------------- ///////////////////////
 
 //////////////////////// ------------------ PRACTICING ARRAY METHODS --------------------------- ////////////////////////
-const bankDepositSum = accounts.flatMap((acc) => acc.movements).filter((mov => mov > 0)).reduce((acc, cur) => acc + cur)
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((acc, cur) => acc + cur);
 console.log(bankDepositSum);
