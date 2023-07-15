@@ -238,6 +238,8 @@ btnSort.addEventListener('click', (e) => {
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
+
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -640,3 +642,7 @@ movements.sort((a,b) => b - a)
 console.log(`In Descending Order ${movements.join(', ')}`);
 
 // If the array is a mixed one i.e it contains both strings and numbers, then it is advisable not to use the sort method at all as there would be no point in doing so.
+
+////////////// -------------- MORE METHODS OF CREATING ND FILLING ARRAYS ---------------- ////////////////////////////
+// How to programmatically create and fill arrays.
+
