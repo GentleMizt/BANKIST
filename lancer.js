@@ -692,11 +692,11 @@ labelBalance.addEventListener('click', e => {
 const bankDepositSum = accounts
   .flatMap(acc => acc.movements)
   .filter(mov => mov > 0)
-  .reduce((acc, cur) => acc + cur, 0);
+  .reduce((sum, cur) => sum + cur, 0);
 console.log(bankDepositSum);
 
 // 2.
 // const numDeposits1000 = accounts.flatMap(acc => acc.movements).filter(mov => mov >= 1000).length; // METHOD 1
 const numDeposits1000 = accounts.flatMap(acc => acc.movements)
-.reduce((acc, )) // METHOD 2
+.reduce((count, cur) => cur >= 1000 ? count + 1 : count , 0) // METHOD 2
 console.log(numDeposits1000);
