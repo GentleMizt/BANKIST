@@ -721,9 +721,9 @@ const {deposits, withdrawals} = accounts
 
 // 5.
 const converTitleCase = (title) => {
-  const exceptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
+  const exceptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with', 'and'];
 
-  const titleCase = title.toLowerCase().split(' ').map(word => exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1))
+  const titleCase = title.toLowerCase().split(' ').map(word => exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)).join(' ')
   return titleCase;
 }
 console.log(converTitleCase('this is a nice title'));
