@@ -672,3 +672,5 @@ console.log(z);
 const diceRolls = Array.from({length: 100}, () => Math.ceil(Math.random() * 6))
 console.log(diceRolls);
 
+const movementsUI = Array.from(document.querySelectorAll('.movements__value'));
+console.log(movementsUI);
