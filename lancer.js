@@ -603,20 +603,26 @@ console.log(movements);
 // return value > 0 B before A (switches the order)
 
 // SORTING IN ASCENDING ORDER
-movements.sort((a,b) => {
-  if (a > b)
-    return 1;
-  if (a < b) 
-    return -1
-});
+
+// movements.sort((a,b) => {
+//   if (a > b)
+//     return 1;
+//   if (a < b) 
+//     return -1
+// });
+
+// Improving the code
+movements.sort((a,b) => a - b);
 console.log(`In Ascending Order ${movements.join(', ')}`);
 
 
 // SORTING IN DESCENDING ORDER
-movements.sort((a,b) => {
-  if (a > b)
-    return -1;
-  if (a < b) 
-    return 1
-});
+// movements.sort((a,b) => {
+//   if (a > b)
+//     return -1;
+//   if (a < b) 
+//     return 1
+// });
+
+movements.sort((a,b) => b - a)
 console.log(`In Descending Order ${movements.join(', ')}`);
