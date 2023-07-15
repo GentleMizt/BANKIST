@@ -659,3 +659,10 @@ const arr3 = new Array(1,2,3,4,5,6,7); // creates an array of the elements passe
 console.log(arr3);
 arr3.fill(50, 2,6)
 console.log(arr3);
+
+// Array.from
+const y = Array.from({length: 7}, () => 1)
+console.log(y);
+
+const z = Array.from({length: 7}, (cur, i) => i + 1)
+console.log(z);
