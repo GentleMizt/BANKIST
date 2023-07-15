@@ -646,3 +646,7 @@ console.log(`In Descending Order ${movements.join(', ')}`);
 ////////////// -------------- MORE METHODS OF CREATING ND FILLING ARRAYS ---------------- ////////////////////////////
 // How to programmatically create and fill arrays.
 
+console.log(new Array(1,2,3,4,5,6,7)); // creates an array of the elements passed into it as arguments.
+
+const x = new Array(7); // creates an array with 7 empty spaces
+console.log(x);
