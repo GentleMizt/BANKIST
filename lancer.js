@@ -645,10 +645,10 @@ console.log(`In Descending Order ${movements.join(', ')}`);
 
 // EMPTY ARRAYS + FILL METHOD
 const x = new Array(7); // creates an array with 7 empty spaces
-console.log(x);
+// console.log(x);
 // x.fill(1) // fills up the array with the element specified in the argument, it mutates the underlying array.
 // x.fill(1,3, 5)
-console.log(x);
+// console.log(x);
 
 // FILL METHOD ON DEFINED ARRAYS
 // the fill method can also be applied on arrays that have already been defined and not just empty arrays.
