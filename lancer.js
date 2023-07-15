@@ -650,3 +650,8 @@ console.log(new Array(1,2,3,4,5,6,7)); // creates an array of the elements passe
 
 const x = new Array(7); // creates an array with 7 empty spaces
 console.log(x);
+// x.fill(1) // fills up the array with the element specified in the argument, it mutates the underlying array.
+x.fill(1,3, 5)
+console.log(x);
+
+// the fill method can also be applied on arrays that have already been defined and not just empty arrays.
