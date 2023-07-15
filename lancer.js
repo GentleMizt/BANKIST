@@ -684,5 +684,5 @@ labelBalance.addEventListener('click', (e) => {
 ////////////////////// -------------------- SUMMARY ON WHICH ARRAY METHOD TO USE ----------------- /////////////////////// 
 
 //////////////////////// ------------------ PRACTICING ARRAY METHODS --------------------------- ////////////////////////
-const bankDepositSum = accounts.map((acc) => acc.movements);
+const bankDepositSum = accounts.flatMap((acc) => acc.movements);
 console.log(bankDepositSum);
