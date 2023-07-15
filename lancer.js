@@ -675,5 +675,5 @@ console.log(diceRolls);
 
 labelBalance.addEventListener('click', (e) => {
   const movementsUI = Array.from(document.querySelectorAll('.movements__value'));
-  console.log(movementsUI.map(el => el.textContent.replace('€', '')));
+  console.log(movementsUI.map(el => Number(el.textContent.replace('€', ''))));
 });
