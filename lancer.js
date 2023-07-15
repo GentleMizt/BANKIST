@@ -656,5 +656,5 @@ console.log(x);
 
 // the fill method can also be applied on arrays that have already been defined and not just empty arrays.
 console.log(arr3);
-arr3.fill(50, 4,6)
+arr3.fill(50, 2,6)
 console.log(arr3);
