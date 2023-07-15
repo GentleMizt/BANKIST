@@ -719,4 +719,10 @@ const {deposits, withdrawals} = accounts
 
   console.log(deposits, withdrawals);
 
-//
+// 5.
+const converTitleCase = (title) => {
+
+}
+converTitleCase('this is a nice title');
+converTitleCase('this is a LONG title but not too long');
+converTitleCase('and here is another title with an example');
