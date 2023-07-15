@@ -229,6 +229,9 @@ btnClose.addEventListener('click', e => {
   inputTransferAmount.blur();
 });
 
+// IMPLEMENTING THE SORT BUTTON
+
+btnSort.addEventListener('click', displayMovements(currentAccount, sort = true));
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
