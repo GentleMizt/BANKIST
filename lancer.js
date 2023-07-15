@@ -599,8 +599,10 @@ console.log(movements);
 // To fix this, a COMPARE CALL BACK FUNCTION has to be passed into the sort method as it is called.
 // This call back function takes in 2 parameters, the first which is usually the CURRENT VALUE, while the second is the NEXT value.
 
-// return < 0, A before B (keeps the order)
-// return > 0 B before A (switches the order)
+// return value < 0, A before B (keeps the order)
+// return value > 0 B before A (switches the order)
+
+// SORTING IN ASCENDING ORDER
 movements.sort((a,b) => {
   if (a > b)
     return 1;
