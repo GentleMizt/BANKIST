@@ -661,6 +661,7 @@ console.log(arr3);
 // The Array.from was originally introduced into js to create arrays from array like structures
 // The querySelectorAll returns a nodelist which is similiar to ab array but at the same time it's not, as a result it does not have access to most array methods like, map, reduce e.t.c
 // In order to make use of those array methods on nodelists, they need to be converted to an array and Array.from() is the man for the job.
+// The Array.from takes in 2 parameters, the first is an iterable and the second is a map function i.e a function to be carried on each iterable element.
 
 const y = Array.from({ length: 7 }, () => 1);
 console.log(y);
@@ -676,4 +677,5 @@ console.log(diceRolls);
 labelBalance.addEventListener('click', (e) => {
   const movementsUI = Array.from(document.querySelectorAll('.movements__value'), el => Number(el.textContent.replace('€', '')));
   // console.log(movementsUI.map(el => Number(el.textContent.replace('€', ''))));
+  console.log(movementsUI);
 });
