@@ -658,6 +658,10 @@ arr3.fill(50, 2, 6);
 console.log(arr3);
 
 // Array.from
+// The Array.from was originally introduced into js to create arrays from array like structures
+// The querySelectorAll returns a nodelist which is similiar to ab array but at the same time it's not, as a result it does not have access to most array methods like, map, reduce e.t.c
+// In order to make use of those array methods on nodelists, they need to be converted to an array and Array.from() is the man for the job.
+
 const y = Array.from({ length: 7 }, () => 1);
 console.log(y);
 
@@ -667,3 +671,4 @@ console.log(z);
 // assignment
 const diceRolls = Array.from({length: 100}, () => Math.ceil(Math.random() * 6))
 console.log(diceRolls);
+
