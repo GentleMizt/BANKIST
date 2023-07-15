@@ -653,9 +653,9 @@ console.log(x);
 // FILL METHOD ON DEFINED ARRAYS
 // the fill method can also be applied on arrays that have already been defined and not just empty arrays.
 const arr3 = new Array(1, 2, 3, 4, 5, 6, 7); // creates an array of the elements passed into it as arguments.
-console.log(arr3);
+// console.log(arr3);
 arr3.fill(50, 2, 6);
-console.log(arr3);
+// console.log(arr3);
 
 // Array.from
 // The Array.from was originally introduced into js to create arrays from array like structures
@@ -664,23 +664,25 @@ console.log(arr3);
 // The Array.from takes in 2 parameters, the first is an iterable and the second is a map function i.e a function to be carried on each iterable element.
 
 const y = Array.from({ length: 7 }, () => 1);
-console.log(y);
+// console.log(y);
 
 const z = Array.from({ length: 7 }, (_, i) => i + 1);
-console.log(z);
+// console.log(z);
 
 // assignment
 const diceRolls = Array.from({length: 100}, () => Math.ceil(Math.random() * 6))
-console.log(diceRolls);
+// console.log(diceRolls);
 
 
 labelBalance.addEventListener('click', (e) => {
   const movementsUI = Array.from(document.querySelectorAll('.movements__value'), el => Number(el.textContent.replace('€', '')));
   // console.log(movementsUI.map(el => Number(el.textContent.replace('€', ''))));
-  console.log(movementsUI);
+  // console.log(movementsUI);
 });
 
 
 ////////////////////// -------------------- SUMMARY ON WHICH ARRAY METHOD TO USE ----------------- /////////////////////// 
 
 //////////////////////// ------------------ PRACTICING ARRAY METHODS --------------------------- ////////////////////////
+const bankDepositSum = accounts.map((acc) => acc.movements);
+console.log(bankDepositSum);
