@@ -572,17 +572,17 @@ const deposit = mov => mov > 0;
 ////////////// ----------------- FLAT AND FLATMAP METHODS --------------------- //////////////////////////
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 // The flat and flatMap methods are new methods that were introduced in 2019.
-console.log(arr.flat()); // It does not take in any call backs.
+// console.log(arr.flat()); // It does not take in any call backs.
 
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
-console.log(arrDeep.flat(2)); // goes in 2 levels deep and flatens the array.
+// console.log(arrDeep.flat(2)); // goes in 2 levels deep and flatens the array.
 
 // Using the flat method
 const overallMoveementsBalance = accounts
   .map(acc => acc.movements)
   .flat()
   .reduce((acc, mov) => acc + mov, 0);
-console.log(overallMoveementsBalance);
+// console.log(overallMoveementsBalance);
 
 // As a result of developers chaining the map and then the flat method immediately, a new method was introduced called the FLATMAP method.
 // It combines both the map and flat into one convenient method.
@@ -591,7 +591,7 @@ console.log(overallMoveementsBalance);
 const overallMoveementsBalance2 = accounts
   .flatMap(acc => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
-console.log(overallMoveementsBalance2);
+// console.log(overallMoveementsBalance2);
 
 // The flatMap method only goes one level deep and it cannot be changed or modified. If going deeper than 1 level is required, the flat method is to be used.
 
@@ -599,12 +599,12 @@ console.log(overallMoveementsBalance2);
 
 // Strings
 const owners = ['Lancer', 'Jonas', 'Faiq', 'Faiza'];
-console.log(owners.sort()); // Sorts the array alphabetically from A - Z;
+// console.log(owners.sort()); // Sorts the array alphabetically from A - Z;
 
 // Sorting Mutates the original array, meaning it directly affects the array when it was initially called.
 
 //  Numbers
-console.log(movements);
+// console.log(movements);
 // console.log(movements.sort());
 
 // when calling the sort method on an array of numbers, it treats the numbers in the array as though it was a string, which is not what we want.
@@ -625,7 +625,7 @@ console.log(movements);
 
 // Improving the code
 movements.sort((a, b) => a - b);
-console.log(`In Ascending Order ${movements.join(', ')}`);
+// console.log(`In Ascending Order ${movements.join(', ')}`);
 
 // SORTING IN DESCENDING ORDER
 // movements.sort((a,b) => {
@@ -636,7 +636,7 @@ console.log(`In Ascending Order ${movements.join(', ')}`);
 // });
 
 movements.sort((a, b) => b - a);
-console.log(`In Descending Order ${movements.join(', ')}`);
+// console.log(`In Descending Order ${movements.join(', ')}`);
 
 // If the array is a mixed one i.e it contains both strings and numbers, then it is advisable not to use the sort method at all as there would be no point in doing so.
 
