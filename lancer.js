@@ -230,8 +230,14 @@ btnClose.addEventListener('click', e => {
 });
 
 // IMPLEMENTING THE SORT BUTTON
+// Initializing a variable to keep track of the sort boolean
 
-btnSort.addEventListener('click', displayMovements(currentAccount, sort = true));
+let sorted = false;
+btnSort.addEventListener('click', (e) => {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
