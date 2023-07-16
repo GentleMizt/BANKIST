@@ -410,6 +410,9 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 // console.log(avg1, avg2);
 
+// CODING CHALLENGE #4
+// Task 1
+
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
 // );
@@ -693,17 +696,17 @@ const bankDepositSum = accounts
   .flatMap(acc => acc.movements)
   .filter(mov => mov > 0)
   .reduce((sum, cur) => sum + cur, 0);
-console.log(bankDepositSum);
+// console.log(bankDepositSum);
 
 // 2.
 // const numDeposits1000 = accounts.flatMap(acc => acc.movements).filter(mov => mov >= 1000).length; // METHOD 1
 const numDeposits1000 = accounts
   .flatMap(acc => acc.movements)
   .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0); // METHOD 2
-console.log(numDeposits1000);
+// console.log(numDeposits1000);
 
 let a = 10;
-console.log(++a);
+// console.log(++a);
 
 // 3.
 const {deposits, withdrawals} = accounts
@@ -717,7 +720,7 @@ const {deposits, withdrawals} = accounts
     { deposits: 0, withdrawals: 0 }
   );
 
-  console.log(deposits, withdrawals);
+  // console.log(deposits, withdrawals);
 
 // 5.
 const converTitleCase = (title) => {
@@ -727,6 +730,6 @@ const converTitleCase = (title) => {
   const titleCase = title.toLowerCase().split(' ').map(word => exceptions.includes(word) ? word : capitalize(word)).join(' ')
   return capitalize(titleCase)
 }
-console.log(converTitleCase('this is a nice title'));
-console.log(converTitleCase('this is a LONG title but not too long'));
-console.log(converTitleCase('and here is another title with an example'));
+// console.log(converTitleCase('this is a nice title'));
+// console.log(converTitleCase('this is a LONG title but not too long'));
+// console.log(converTitleCase('and here is another title with an example'));
