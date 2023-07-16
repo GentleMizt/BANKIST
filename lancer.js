@@ -419,8 +419,47 @@ const dogs = [
   {weight: 32, curFood: 340, owners: ['Michael']},
 ]
 
-
 // Task 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
