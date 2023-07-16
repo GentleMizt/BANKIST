@@ -426,7 +426,7 @@ dogs.forEach(dog => {
 console.log(dogs);
 
 // TASK 2
-
+dogs.find(dog => dog.owners.includes('Sarah'))
 
 // console.log(sarahDog);
 
