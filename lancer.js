@@ -434,6 +434,10 @@ if (sarahDog.curFood > sarahDog.recommendedFood) {
   console.log(`${sarahDog.owners[0]}'s dog eats too little`);
 }
 
+// TASK 3
+const ownersEatTooMuch = dogs.map(dog => dog.curFood > dog.recommendedFood);
+const ownersEatTooLittle = dogs.map(dog => dog.curFood < dog.recommendedFood);
+
 
 
 
