@@ -413,21 +413,20 @@ const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 // CODING CHALLENGE #4
 
 const dogs = [
-  {weight: 22, curFood: 250, owners: ['Alice', 'Bob']},
-  {weight: 8, curFood: 200, owners: ['Matilda']},
-  {weight: 13, curFood: 275, owners: ['Sarah', 'John']},
-  {weight: 32, curFood: 340, owners: ['Michael']},
-]
+  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+  { weight: 8, curFood: 200, owners: ['Matilda'] },
+  { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+  { weight: 32, curFood: 340, owners: ['Michael'] },
+];
 
 // Task 1
 dogs.forEach(dog => {
-  dog.recommendedFood = dog.weight ** 0.75 * 28
-})
+  dog.recommendedFood = dog.weight ** 0.75 * 28;
+});
 console.log(dogs);
 
 // TASK 2
 const sarahDog = dogs.find(dog => dog.owners.includes('Sarah'));
-
 if (sarahDog.curFood > sarahDog.recommendedFood) {
   console.log(`${sarahDog.owners[0]}'s dog eats too much`);
 } else {
@@ -435,48 +434,14 @@ if (sarahDog.curFood > sarahDog.recommendedFood) {
 }
 
 // TASK 3
-const ownersEatTooMuch = dogs.filter((dog, i, arr) => dog.curFood > dog.recommendedFood).map(dog => `${dog.owners.join(' and ')}'s dog eats too much!`);
-console.log(ownersEatTooMuch);
-const ownersEatTooLittle = dogs.map(dog => dog.curFood < dog.recommendedFood);
-// console.log(ownersEatTooMuch, ownersEatTooLittle);
+const ownersEatTooMuch = dogs
+  .filter(dog => dog.curFood > dog.recommendedFood)
+  .map(dog => `${dog.owners.join(' and ')}'s dog eats too much!`);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  const ownersEatTooLittle = dogs
+  .filter(dog => dog.curFood < dog.recommendedFood)
+  .map(dog => `${dog.owners.join(' and ')}'s dog eats too little!`);
+console.log(ownersEatTooMuch, ownersEatTooLittle);
 
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
@@ -774,27 +739,31 @@ let a = 10;
 // console.log(++a);
 
 // 3.
-const {deposits, withdrawals} = accounts
+const { deposits, withdrawals } = accounts
   .flatMap(acc => acc.movements)
   .reduce(
     (sums, cur, i) => {
       // cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
-      sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur
+      sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
       return sums;
     },
     { deposits: 0, withdrawals: 0 }
   );
 
-  // console.log(deposits, withdrawals);
+// console.log(deposits, withdrawals);
 
 // 5.
-const converTitleCase = (title) => {
+const converTitleCase = title => {
   const capitalize = str => str[0].toUpperCase() + str.slice(1);
   const exceptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with', 'and'];
 
-  const titleCase = title.toLowerCase().split(' ').map(word => exceptions.includes(word) ? word : capitalize(word)).join(' ')
-  return capitalize(titleCase)
-}
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map(word => (exceptions.includes(word) ? word : capitalize(word)))
+    .join(' ');
+  return capitalize(titleCase);
+};
 // console.log(converTitleCase('this is a nice title'));
 // console.log(converTitleCase('this is a LONG title but not too long'));
 // console.log(converTitleCase('and here is another title with an example'));
