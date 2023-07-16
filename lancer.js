@@ -453,6 +453,13 @@ console.log(dogs.some(dog => dog.recommendedFood === dog.curFood));
 // Task 6 
 console.log(dogs.some(dog => dog.curFood > (dog.recommendedFood * 0.9) && dog.curFood < (dog.recommendedFood * 1.1)));
 
+// Task 7
+const okayFoods = dogs.filter(dog => dog.curFood > (dog.recommendedFood * 0.9) && dog.curFood < (dog.recommendedFood * 1.1));
+console.log(okayFoods);
+
+// Task 8
+const dogsSorted = dogs.slice().sort((a,b) => a.curFood - b.curFood);
+console.log(dogsSorted);
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
 // );
