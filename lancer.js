@@ -443,6 +443,17 @@ const ownersEatTooMuch = dogs
   .map(dog => `${dog.owners.join(' and ')}'s dog eats too little!`);
 console.log(ownersEatTooMuch, ownersEatTooLittle);
 
+// Task 4
+const overAll = [...ownersEatTooMuch, ...ownersEatTooLittle]
+console.log(overAll);
+
+// Task 5
+console.log(dogs.filter(dog => {
+ return dog.curFood > (dog.recommendedFood * 0.9) && dog.curFood < (dog.recommendedFood * 1.1)
+}));
+
+// Task 6 
+
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
 // );
