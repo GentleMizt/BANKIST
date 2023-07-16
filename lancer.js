@@ -448,11 +448,12 @@ const overAll = [...ownersEatTooMuch, ...ownersEatTooLittle]
 console.log(overAll);
 
 // Task 5
-console.log(dogs.filter(dog => {
- return dog.curFood > (dog.recommendedFood * 0.9) && dog.curFood < (dog.recommendedFood * 1.1)
+console.log(dogs.some(dog => {
+  return dog.recommendedFood === dog.curFood ? true : false
 }));
 
 // Task 6 
+
 
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
