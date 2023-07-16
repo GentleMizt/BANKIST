@@ -428,7 +428,11 @@ console.log(dogs);
 // TASK 2
 const sarahDog = dogs.find(dog => dog.owners.includes('Sarah'));
 
-console.log(sarahDog);
+if (sarahDog.curFood > sarahDog.recommendedFood) {
+  console.log(`${sarahDog.owners[0]}'s dog eats too much`);
+} else {
+  console.log(`${sarahDog.owners[0]}'s dog eats too little`);
+}
 
 
 
