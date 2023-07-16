@@ -420,7 +420,10 @@ const dogs = [
 ]
 
 // Task 1
-
+dogs.forEach(dog => {
+  dog.recommendedFood = dog.weight ** 0.75 * 28
+})
+console.log(dogs);
 
 
 
