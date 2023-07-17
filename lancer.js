@@ -476,7 +476,8 @@ console.log(dogsSorted);
 console.log('JONAZ SOLUTION');
 
 // TASK 2
-const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'))
+const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'}`);
 
 
 // console.log(
