@@ -475,7 +475,8 @@ console.log(dogsSorted);
 // JONAZ SOLUTION
 console.log('JONAZ SOLUTION');
 
-// TASK 1
+// TASK 2
+const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'))
 
 
 // console.log(
