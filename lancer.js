@@ -451,35 +451,29 @@ console.log(`${ownersEatTooLittle.join(' and ')}'s dog eats too little!`);
 // Task 5
 console.log(dogs.some(dog => dog.recFood === dog.curFood));
 
+const checkEatingOkay = dog =>
+  dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1;
 // Task 6
-console.log(
-  dogs.some(
-    dog =>
-      dog.curFood > dog.recFood * 0.9 &&
-      dog.curFood < dog.recFood * 1.1
-  )
-);
+console.log(dogs.some(checkEatingOkay));
 
 // Task 7
-const okayFoods = dogs.filter(
-  dog =>
-    dog.curFood > dog.recFood * 0.9 &&
-    dog.curFood < dog.recFood * 1.1
-);
+const okayFoods = dogs.filter(checkEatingOkay);
 console.log(okayFoods);
 
 // Task 8
 const dogsSorted = dogs.slice().sort((a, b) => a.curFood - b.curFood);
 console.log(dogsSorted);
 
-
 // JONAZ SOLUTION
 console.log('JONAZ SOLUTION');
 
 // TASK 2
 const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
-console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recFood ? 'much' : 'little'}`);
-
+console.log(
+  `Sarah's dog is eating too ${
+    dogSarah.curFood > dogSarah.recFood ? 'much' : 'little'
+  }`
+);
 
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
