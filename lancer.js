@@ -445,8 +445,8 @@ const ownersEatTooLittle = dogs
 // console.log(ownersEatTooMuch, ownersEatTooLittle);
 
 // Task 4
-console.log(`${ownersEatTooMuch.join(' and ')} dog eats too much!`);
-console.log(`${ownersEatTooLittle.join(' and ')} dog eats too little!`);
+console.log(`${ownersEatTooMuch.join(' and ')}'s dog eats too much!`);
+console.log(`${ownersEatTooLittle.join(' and ')}'s dog eats too little!`);
 
 // Task 5
 console.log(dogs.some(dog => dog.recFood === dog.curFood));
