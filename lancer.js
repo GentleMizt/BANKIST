@@ -471,6 +471,13 @@ console.log(okayFoods);
 const dogsSorted = dogs.slice().sort((a, b) => a.curFood - b.curFood);
 console.log(dogsSorted);
 
+
+// JONAZ SOLUTION
+console.log('JONAZ SOLUTION');
+
+// TASK 1
+
+
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
 // );
