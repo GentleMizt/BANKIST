@@ -438,40 +438,38 @@ const ownersEatTooMuch = dogs
   .filter(dog => dog.curFood > dog.recommendedFood)
   .map(dog => `${dog.owners.join(' and ')}'s dog eats too much!`);
 
-  const ownersEatTooLittle = dogs
+const ownersEatTooLittle = dogs
   .filter(dog => dog.curFood < dog.recommendedFood)
   .map(dog => `${dog.owners.join(' and ')}'s dog eats too little!`);
 console.log(ownersEatTooMuch, ownersEatTooLittle);
 
 // Task 4
-const overAll = [...ownersEatTooMuch, ...ownersEatTooLittle]
+const overAll = [...ownersEatTooMuch, ...ownersEatTooLittle];
 console.log(overAll);
 
 // Task 5
 console.log(dogs.some(dog => dog.recommendedFood === dog.curFood));
 
-// Task 6 
-console.log(dogs.some(dog => dog.curFood > (dog.recommendedFood * 0.9) && dog.curFood < (dog.recommendedFood * 1.1)));
+// Task 6
+console.log(
+  dogs.some(
+    dog =>
+      dog.curFood > dog.recommendedFood * 0.9 &&
+      dog.curFood < dog.recommendedFood * 1.1
+  )
+);
 
 // Task 7
-const okayFoods = dogs.filter(dog => dog.curFood > (dog.recommendedFood * 0.9) && dog.curFood < (dog.recommendedFood * 1.1));
+const okayFoods = dogs.filter(
+  dog =>
+    dog.curFood > dog.recommendedFood * 0.9 &&
+    dog.curFood < dog.recommendedFood * 1.1
+);
 console.log(okayFoods);
 
 // Task 8
-const dogsSorted = dogs.slice().sort((a,b) => a.curFood - b.curFood);
+const dogsSorted = dogs.slice().sort((a, b) => a.curFood - b.curFood);
 console.log(dogsSorted);
-
-
-
-
-
-
-
-
-
-
-
-
 
 // console.log(
 //   `The average of the first array is ${avg1}, The average of the second array is ${avg2}`
