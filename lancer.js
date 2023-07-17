@@ -461,11 +461,10 @@ const okayFoods = dogs.filter(checkEatingOkay);
 console.log(okayFoods);
 
 // Task 8
-const dogsSorted = dogs.slice().sort((a, b) => a.curFood - b.curFood);
+const dogsSorted = dogs.slice().sort((a, b) => a.recFood - b.recFood);
 console.log(dogsSorted);
 
-// JONAZ SOLUTION
-console.log('JONAZ SOLUTION');
+
 
 // TASK 2
 const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
