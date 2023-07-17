@@ -433,19 +433,20 @@ if (sarahDog.curFood > sarahDog.recFood) {
   console.log(`${sarahDog.owners[0]}'s dog eats too little`);
 }
 
-// TASK 4
+// TASK 3
 const ownersEatTooMuch = dogs
   .filter(dog => dog.curFood > dog.recFood)
-  .map(dog => `${dog.owners.join(' and ')}'s dog eats too much!`);
+  .flatMap(dog => dog.owners);
 
 const ownersEatTooLittle = dogs
   .filter(dog => dog.curFood < dog.recFood)
-  .map(dog => `${dog.owners.join(' and ')}'s dog eats too little!`);
-console.log(ownersEatTooMuch, ownersEatTooLittle);
+  .flatMap(dog => dog.owners);
 
-// Task 3
-const overAll = [...ownersEatTooMuch, ...ownersEatTooLittle];
-console.log(overAll);
+// console.log(ownersEatTooMuch, ownersEatTooLittle);
+
+// Task 4
+console.log(`${ownersEatTooMuch.join(' and ')} dog eats too much!`);
+console.log(`${ownersEatTooLittle.join(' and ')} dog eats too little!`);
 
 // Task 5
 console.log(dogs.some(dog => dog.recFood === dog.curFood));
