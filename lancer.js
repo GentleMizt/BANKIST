@@ -421,13 +421,13 @@ const dogs = [
 
 // Task 1
 dogs.forEach(dog => {
-  dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28);
+  dog.recFood = Math.trunc(dog.weight ** 0.75 * 28);
 });
 console.log(dogs);
 
 // TASK 2
 const sarahDog = dogs.find(dog => dog.owners.includes('Sarah'));
-if (sarahDog.curFood > sarahDog.recommendedFood) {
+if (sarahDog.curFood > sarahDog.recFood) {
   console.log(`${sarahDog.owners[0]}'s dog eats too much`);
 } else {
   console.log(`${sarahDog.owners[0]}'s dog eats too little`);
@@ -435,11 +435,11 @@ if (sarahDog.curFood > sarahDog.recommendedFood) {
 
 // TASK 4
 const ownersEatTooMuch = dogs
-  .filter(dog => dog.curFood > dog.recommendedFood)
+  .filter(dog => dog.curFood > dog.recFood)
   .map(dog => `${dog.owners.join(' and ')}'s dog eats too much!`);
 
 const ownersEatTooLittle = dogs
-  .filter(dog => dog.curFood < dog.recommendedFood)
+  .filter(dog => dog.curFood < dog.recFood)
   .map(dog => `${dog.owners.join(' and ')}'s dog eats too little!`);
 console.log(ownersEatTooMuch, ownersEatTooLittle);
 
@@ -448,22 +448,22 @@ const overAll = [...ownersEatTooMuch, ...ownersEatTooLittle];
 console.log(overAll);
 
 // Task 5
-console.log(dogs.some(dog => dog.recommendedFood === dog.curFood));
+console.log(dogs.some(dog => dog.recFood === dog.curFood));
 
 // Task 6
 console.log(
   dogs.some(
     dog =>
-      dog.curFood > dog.recommendedFood * 0.9 &&
-      dog.curFood < dog.recommendedFood * 1.1
+      dog.curFood > dog.recFood * 0.9 &&
+      dog.curFood < dog.recFood * 1.1
   )
 );
 
 // Task 7
 const okayFoods = dogs.filter(
   dog =>
-    dog.curFood > dog.recommendedFood * 0.9 &&
-    dog.curFood < dog.recommendedFood * 1.1
+    dog.curFood > dog.recFood * 0.9 &&
+    dog.curFood < dog.recFood * 1.1
 );
 console.log(okayFoods);
 
@@ -477,7 +477,7 @@ console.log('JONAZ SOLUTION');
 
 // TASK 2
 const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
-console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'}`);
+console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recFood ? 'much' : 'little'}`);
 
 
 // console.log(
