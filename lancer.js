@@ -238,6 +238,3 @@ btnSort.addEventListener('click', e => {
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
-
-
-
