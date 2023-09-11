@@ -4,7 +4,6 @@
 /////////////////////////////////////////////////
 // BANKIST APP
 
-
 // DIFFERENT DATA! Contains movement dates, currency and locale
 
 const account1 = {
@@ -156,7 +155,7 @@ btnLogin.addEventListener('click', e => {
   currentAccount = accounts.find(
     acc => acc.username === inputLoginUsername.value
   );
-  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+  if (currentAccount?.pin === +inputLoginPin.value) {
     // Display UI and Welcome Message
     labelWelcome.textContent = `Welcome Back ${
       currentAccount.owner.split(' ')[0]
@@ -176,7 +175,7 @@ btnLogin.addEventListener('click', e => {
 btnTransfer.addEventListener('click', e => {
   e.preventDefault();
 
-  const amount = Number(inputTransferAmount.value);
+  const amount = +inputTransferAmount.value;
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value
   );
@@ -205,7 +204,7 @@ btnTransfer.addEventListener('click', e => {
 btnLoan.addEventListener('click', e => {
   e.preventDefault();
 
-  const amount = Number(inputLoanAmount.value);
+  const amount = +inputLoanAmount.value;
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     // Adding the amount into the movement array
     currentAccount.movements.push(amount);
@@ -226,7 +225,7 @@ btnClose.addEventListener('click', e => {
 
   if (
     inputCloseUsername.value === currentAccount.username &&
-    Number(inputClosePin.value) === currentAccount.pin
+    +inputClosePin.value === currentAccount.pin
   ) {
     // Deleting the current account using the splice method
     const index = accounts.findIndex(acc => {
@@ -253,3 +252,9 @@ btnSort.addEventListener('click', e => {
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
+
+// LECTURES //
+console.log(23 === 23.0);
+console.log(0.1 + 0.2);
+
+console.log(+'23');
