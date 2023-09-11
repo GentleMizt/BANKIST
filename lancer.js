@@ -256,7 +256,7 @@ btnSort.addEventListener('click', e => {
 // LECTURES //
 // console.log(23 === 23.0);
 // console.log(0.1 + 0.2);
-// 
+//
 // Converting strings to numbers
 // console.log(+'23');
 
@@ -282,24 +282,47 @@ btnSort.addEventListener('click', e => {
 
 ////// MATH METHODS /////////////
 
-console.log(Math.sqrt(36));
-console.log(27 ** (1/3));
+// console.log(Math.sqrt(36));
+// console.log(27 ** (1/3));
 
-console.log(Math.max(5,23,434,535,4341));
-console.log(Math.max(1,23,434,+'535',4341));
-console.log(Math.min(1,23,434,+'535',4341));
+// console.log(Math.max(5,23,434,535,4341));
+// console.log(Math.max(1,23,434,+'535',4341));
+// console.log(Math.min(1,23,434,+'535',4341));
 
-console.log(Math.PI * Number.parseFloat('20px') ** 2);
-console.log(Math.trunc(Math.random() * 6) + 1);
+// console.log(Math.PI * Number.parseFloat('20px') ** 2);
+// console.log(Math.trunc(Math.random() * 6) + 1);
 
-const randomInt  = (min, max) => Math.trunc(Math.random() * (max - min) + 1) + min;
-console.log(randomInt(10,20));
+// const randomInt  = (min, max) => Math.trunc(Math.random() * (max - min) + 1) + min;
+// console.log(randomInt(10,20));
 
-console.log(Math.trunc(-23.3));
-console.log(Math.floor(-23.3));
-console.log(Math.ceil(-23.3));
+// console.log(Math.trunc(-23.3));
+// console.log(Math.floor(-23.3));
+// console.log(Math.ceil(-23.3));
 
 // Rounding Decimals
-console.log((2.7).toFixed(0));  // returns a string and not a number
-console.log((2.7).toFixed(2));  // returns a string and not a number
-console.log(+(2.345).toFixed(2));  // modified to return a number
+// console.log((2.7).toFixed(0));  // returns a string and not a number
+// console.log((2.7).toFixed(2));  // returns a string and not a number
+// console.log(+(2.345).toFixed(2));  // modified to return a number
+
+// THE REMAINDER OPERATOR
+// - Simply returns the remainder of a division.
+
+console.log(5 % 2);
+console.log(8 % 3);
+
+console.log(6 % 2);
+
+const isEven = n => n % 2 === 0;
+console.log(isEven(3));
+console.log(isEven(4));
+
+labelBalance.addEventListener('click', () => {
+  [...document.querySelectorAll('.movements__row')].forEach((row, i) => {
+    if (i % 2 === 0) {
+      row.style.backgroundColor = 'orangered';
+    }
+    if (i % 3 === 0) {
+      row.style.backgroundColor = 'blue'
+    }
+  });
+});
