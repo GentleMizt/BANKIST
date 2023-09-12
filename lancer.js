@@ -347,29 +347,32 @@ btnSort.addEventListener('click', e => {
 
 
 ////////// BIGINT /////////////
-console.log(2 ** 53-1);
-console.log(Number.MAX_SAFE_INTEGER);
+// console.log(2 ** 53-1);
+// console.log(Number.MAX_SAFE_INTEGER);
 
-console.log(4358573845738758345784572348573485734534957328532095n);
-console.log(BigInt(4358573845738758345784572348573485734534957328532095));
+// console.log(4358573845738758345784572348573485734534957328532095n);
+// console.log(BigInt(4358573845738758345784572348573485734534957328532095));
 
-// Operations with the BigInt
-console.log(10000n + 10000n);
-console.log(434534543543543534534534545435345345n * 334345235345345345345235345345325345345345n);
+// // Operations with the BigInt
+// console.log(10000n + 10000n);
+// console.log(434534543543543534534534545435345345n * 334345235345345345345235345345325345345345n);
 
-const huge = 3453453453453245325345345n;
-const regular = 23;
+// const huge = 3453453453453245325345345n;
+// const regular = 23;
 
-console.log(huge * BigInt(regular));
+// console.log(huge * BigInt(regular));
 
 // Exceptions in BigInt
-console.log(20n > 13);
-console.log(20n === 20);
-console.log(typeof 20n);
-console.log(typeof 20);
+// console.log(20n > 13);
+// console.log(20n === 20);
+// console.log(typeof 20n);
+// console.log(typeof 20);
 
-console.log(huge + ' is REALLY BIG');
+// console.log(huge + ' is REALLY BIG');
 
 // Divisions
-console.log(15n/3n);
-console.log(10/3);
+// console.log(15n/3n);
+// console.log(10/3);
+
+
+// 
