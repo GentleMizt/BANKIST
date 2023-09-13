@@ -176,6 +176,19 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
+// Experimenting with the INTERNALIZATION API
+const now = new Date();
+const options = {
+  hour: 'numeric',
+  minute: 'numeric',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  weekday: 'short'
+};
+labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
+
+
 // IMPLEMENTING THE LOGIN FUNCTION (USING THE FIND METHOD)
 
 btnLogin.addEventListener('click', e => {
@@ -468,3 +481,6 @@ btnSort.addEventListener('click', e => {
 // console.log(days1);
 
 // console.log(new Date('September 05, 2023').toISOString());
+
+// INTERNALIZING DATES //
+
