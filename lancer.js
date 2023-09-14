@@ -78,33 +78,32 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // FUNCTIONS //
 
-const startLogOutTimer = () =>{
-  // setting the time to 5 mins
-  let time = 10;
-
-  // Call the timer every second
-  const timer = setInterval(()=>{
-    const min = `${Math.trunc(time / 60)}`.padStart(2,0);
-    const sec = `${time % 60}`.padStart(2,0);
+const startLogOutTimer = () => {
+  const tickTock = () => {
+    const min = `${Math.trunc(time / 60)}`.padStart(2, 0);
+    const sec = `${time % 60}`.padStart(2, 0);
     // In each call, print the remaining time to the user interface
     labelTimer.textContent = `${min}:${sec}`;
-
-    // Decrease by 1s
-
-    time--;
-
 
     // When the timer hits 0 second, stop the timer and log out the user.
     if (time === 0) {
       clearInterval(timer);
-      labelWelcome.textContent = 'Log in to get started'
+      labelWelcome.textContent = 'Log in to get started';
       containerApp.style.opacity = 0;
     }
-  }, 1000)
 
-}
+    // Decrease by 1s
+    time--;
+  }
+  // setting the time to 5 mins
+  let time = 10;
 
-
+  // calling the timer initially 
+  tickTock();
+  
+  // Call the timer every second
+  const timer = setInterval(tickTock, 1000);
+};
 
 const formatCur = (value, locale, currency) => {
   return new Intl.NumberFormat(locale, {
@@ -268,7 +267,7 @@ btnLogin.addEventListener('click', e => {
     inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
     inputLoginPin.blur();
 
-      startLogOutTimer();
+    startLogOutTimer();
 
     // Updating the UI
     updateUI(currentAccount);
