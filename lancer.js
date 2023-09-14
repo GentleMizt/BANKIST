@@ -77,6 +77,35 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // DOM MANIPULATION OF THE BANKIST APP //
 
 // FUNCTIONS //
+
+const startLogOutTimer = () =>{
+  // setting the time to 5 mins
+  let time = 10;
+
+  // Call the timer every second
+  const timer = setInterval(()=>{
+    const min = `${Math.trunc(time / 60)}`.padStart(2,0);
+    const sec = `${time % 60}`.padStart(2,0);
+    // In each call, print the remaining time to the user interface
+    labelTimer.textContent = `${min}:${sec}`;
+
+    // Decrease by 1s
+
+    time--;
+
+
+    // When the timer hits 0 second, stop the timer and log out the user.
+    if (time === 0) {
+      clearInterval(timer);
+      labelWelcome.textContent = 'Log in to get started'
+      containerApp.style.opacity = 0;
+    }
+  }, 1000)
+
+}
+
+
+
 const formatCur = (value, locale, currency) => {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
@@ -186,9 +215,9 @@ const updateUI = function (acc) {
 let currentAccount;
 
 // FAKE ALWAYS LOGGED IN
-currentAccount = account1;
-updateUI(currentAccount);
-containerApp.style.opacity = 100;
+// currentAccount = account1;
+// updateUI(currentAccount);
+// containerApp.style.opacity = 100;
 
 // Experimenting with the INTERNALIZATION API
 // const now = new Date();
@@ -238,6 +267,8 @@ btnLogin.addEventListener('click', e => {
     // Clearing Input Fields;
     inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
     inputLoginPin.blur();
+
+      startLogOutTimer();
 
     // Updating the UI
     updateUI(currentAccount);
