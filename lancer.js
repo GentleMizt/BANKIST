@@ -140,7 +140,11 @@ const calcDisplaySummary = function (acc) {
   const outgoings = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${formatCur(Math.abs(outgoings), acc.locale, acc.currency)}`;
+  labelSumOut.textContent = `${formatCur(
+    Math.abs(outgoings),
+    acc.locale,
+    acc.currency
+  )}`;
 
   const interest = acc.movements
     .filter(mov => mov > 0)
@@ -149,7 +153,11 @@ const calcDisplaySummary = function (acc) {
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${formatCur(interest, acc.locale, acc.currency)}`;
+  labelSumInterest.textContent = `${formatCur(
+    interest,
+    acc.locale,
+    acc.currency
+  )}`;
 };
 
 const createUsernames = function (accs) {
@@ -275,20 +283,20 @@ btnLoan.addEventListener('click', e => {
 
   const amount = Math.floor(inputLoanAmount.value);
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
-    // Adding the amount into the movement array
-    currentAccount.movements.push(amount);
+    setTimeout(function () {
+      // Adding the amount into the movement array
+      currentAccount.movements.push(amount);
 
-    // Add transfer date
-    currentAccount.movementsDates.push(new Date().toISOString());
+      // Add transfer date
+      currentAccount.movementsDates.push(new Date().toISOString());
 
-    // Updating the UI
-    updateUI(currentAccount);
-  } else {
-    alert('You do not qualify to take this loan');
+      // Updating the UI
+      updateUI(currentAccount);
+    }, 3000);
+
+    inputLoanAmount.value = '';
+    inputLoanAmount.blur();
   }
-
-  inputLoanAmount.value = '';
-  inputLoanAmount.blur();
 });
 
 // IMPLEMENTING CLOSING OF ACCOUNT (USING THE FINDINDEX METHOD)
@@ -510,9 +518,28 @@ btnSort.addEventListener('click', e => {
 // console.log('Syria:',new Intl.NumberFormat('ar-SY', options).format(num));
 // console.log('Navigator Language:',new Intl.NumberFormat(navigator.language, options).format(num));
 
-
 // TIMERS IN JAVASCRIPT //
 // - SET TIMEOUT runs only once after a predefined time
 // - SET INTERVAL keeps running indefinitely till the user stops it
 
 // SET TIMEOUT //
+// - arguments passed after the delay timer would serve as arguments to the setTimeout function
+
+const ingredients = ['olives', 'cabbages'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here is your Pizza with ${ing1} and ${ing2} 🍕`),
+  3000,
+  ...ingredients
+);
+console.log('Waiting...');
+
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+
+// SET INTERVAL //
+setInterval(() => {
+  const now = new Date();
+  const hour = `${now.getHours()}`.padStart(2,0);
+  const minute = `${now.getMinutes()}`.padStart(2,0);
+  const sec = `${now.getSeconds()}`.padStart(2,0);
+  console.log(`${hour}:${minute}:${sec}`);
+}, 1000);
