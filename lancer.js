@@ -509,3 +509,10 @@ btnSort.addEventListener('click', e => {
 // console.log('Germany:',new Intl.NumberFormat('de-DE', options).format(num));
 // console.log('Syria:',new Intl.NumberFormat('ar-SY', options).format(num));
 // console.log('Navigator Language:',new Intl.NumberFormat(navigator.language, options).format(num));
+
+
+// TIMERS IN JAVASCRIPT //
+// - SET TIMEOUT runs only once after a predefined time
+// - SET INTERVAL keeps running indefinitely till the user stops it
+
+// SET TIMEOUT //
