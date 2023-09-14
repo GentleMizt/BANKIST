@@ -96,13 +96,14 @@ const startLogOutTimer = () => {
     time--;
   };
   // setting the time to 5 mins
-  let time = 10;
+  let time = 30;
 
   // calling the timer initially
   tickTock();
 
   // Call the timer every second
   const timer = setInterval(tickTock, 1000);
+  return timer;
 };
 
 const formatCur = (value, locale, currency) => {
@@ -211,7 +212,7 @@ const updateUI = function (acc) {
 };
 
 // EVENT HANDLERS
-let currentAccount;
+let currentAccount, timer;
 
 // FAKE ALWAYS LOGGED IN
 // currentAccount = account1;
@@ -267,7 +268,8 @@ btnLogin.addEventListener('click', e => {
     inputLoginUsername.value = inputLoginPin.value = ''; // This works because the assignment operator starts reading from RIGHT to LEFT.
     inputLoginPin.blur();
 
-    startLogOutTimer();
+    if (timer) clearInterval(timer);
+    timer = startLogOutTimer();
 
     // Updating the UI
     updateUI(currentAccount);
