@@ -525,21 +525,21 @@ btnSort.addEventListener('click', e => {
 // SET TIMEOUT //
 // - arguments passed after the delay timer would serve as arguments to the setTimeout function
 
-const ingredients = ['olives', 'cabbages'];
-const pizzaTimer = setTimeout(
-  (ing1, ing2) => console.log(`Here is your Pizza with ${ing1} and ${ing2} 🍕`),
-  3000,
-  ...ingredients
-);
-console.log('Waiting...');
+// const ingredients = ['olives', 'cabbages'];
+// const pizzaTimer = setTimeout(
+//   (ing1, ing2) => console.log(`Here is your Pizza with ${ing1} and ${ing2} 🍕`),
+//   3000,
+//   ...ingredients
+// );
+// console.log('Waiting...');
 
-if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+// if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
 
-// SET INTERVAL //
-setInterval(() => {
-  const now = new Date();
-  const hour = `${now.getHours()}`.padStart(2,0);
-  const minute = `${now.getMinutes()}`.padStart(2,0);
-  const sec = `${now.getSeconds()}`.padStart(2,0);
-  console.log(`${hour}:${minute}:${sec}`);
-}, 1000);
+// // SET INTERVAL //
+// setInterval(() => {
+//   const now = new Date();
+//   const hour = `${now.getHours()}`.padStart(2,0);
+//   const minute = `${now.getMinutes()}`.padStart(2,0);
+//   const sec = `${now.getSeconds()}`.padStart(2,0);
+//   console.log(`${hour}:${minute}:${sec}`);
+// }, 1000);
