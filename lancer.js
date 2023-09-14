@@ -94,13 +94,13 @@ const startLogOutTimer = () => {
 
     // Decrease by 1s
     time--;
-  }
+  };
   // setting the time to 5 mins
   let time = 10;
 
-  // calling the timer initially 
+  // calling the timer initially
   tickTock();
-  
+
   // Call the timer every second
   const timer = setInterval(tickTock, 1000);
 };
