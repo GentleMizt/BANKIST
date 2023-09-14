@@ -96,7 +96,7 @@ const startLogOutTimer = () => {
     time--;
   };
   // setting the time to 5 mins
-  let time = 30;
+  let time = 300;
 
   // calling the timer initially
   tickTock();
@@ -307,6 +307,10 @@ btnTransfer.addEventListener('click', e => {
   } else {
     alert('Transfer Invalid');
   }
+
+  // Resetting the timer
+  clearInterval(timer);
+  timer = startLogOutTimer();
 });
 
 // REQUESTING A LOAN FROM THE BANK (USING THE SOME METHOD)
@@ -328,6 +332,9 @@ btnLoan.addEventListener('click', e => {
 
     inputLoanAmount.value = '';
     inputLoanAmount.blur();
+
+    clearInterval(timer);
+    timer = startLogOutTimer();
   }
 });
 
